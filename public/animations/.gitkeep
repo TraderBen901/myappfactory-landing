@@ -1,0 +1,20 @@
+# Animations directory
+
+Drop your isometric animation assets here.
+
+Recommended formats:
+- hero.mp4 (or .webm) — main hero animation, ratio 5:6
+- approach.mp4 — factory schema, ratio 16:10
+
+Usage in components: replace the AnimationSlot placeholder with:
+
+```tsx
+<video
+  src="/animations/hero.mp4"
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="h-full w-full object-cover"
+/>
+```

@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "title": "MyAppFactory — Your custom app factory",
+    "description": "AI-native applications, built for you, shipped fast. Reusable packs and AI customization for SMBs going digital."
+  },
+  "header": {
+    "nav": {
+      "approach": "Approach",
+      "build": "Work",
+      "process": "Process",
+      "contact": "Contact"
+    },
+    "cta": "Book a call"
+  },
+  "hero": {
+    "eyebrow": "AI-native studio · Launching 2026",
+    "title": "Your custom",
+    "titleAccent": "app factory.",
+    "subtitle": "Not an AI subscription. Not classic dev. An architecture built from scratch, on battle-tested blocks.",
+    "ctaPrimary": "Book a discovery call",
+    "ctaSecondary": "See our work",
+    "stats": {
+      "speed": "6x faster",
+      "speedLabel": "than classic dev",
+      "packs": "Reusable packs",
+      "packsLabel": "ready to customize",
+      "ai": "AI-native",
+      "aiLabel": "by default, not as an option"
+    }
+  },
+  "problem": {
+    "eyebrow": "The problem",
+    "title": "Today's solutions don't cut it anymore.",
+    "subtitle": "Three dead ends slowing down your SMB's digital shift.",
+    "cards": {
+      "generic": {
+        "title": "Generic SaaS",
+        "body": "They cover 60% of your needs. The remaining 40% — your business, your workflows — stays stuck in spreadsheets."
+      },
+      "custom": {
+        "title": "Classic development",
+        "body": "Six months to ship an MVP. Three years of technical debt. A budget that doubles for unclear reasons."
+      },
+      "ai": {
+        "title": "Bolted-on AI",
+        "body": "A chatbot pasted on your site isn't AI-native. Bolted on, AI saves you 10% of time. At the architectural core, it multiplies your capacity."
+      }
+    }
+  },
+  "approach": {
+    "eyebrow": "Our approach",
+    "title": "The Factory: reusable packs + AI customization.",
+    "subtitle": "We don't write every app from a blank page. We assemble industrial modules — auth, payment, dashboards, AI agents — and tune them to your business.",
+    "pillars": {
+      "modular": {
+        "title": "Battle-tested blocks",
+        "body": "A library of modules already proven in production. Auth, payment, CRM, dashboards, AI agents — assembled, not rewritten."
+      },
+      "aiNative": {
+        "title": "AI-native, not patched",
+        "body": "AI is built in at the architecture level, not bolted on at the end. Agents, semantic search, automation — native by design."
+      },
+      "ownership": {
+        "title": "You stay in control",
+        "body": "No golden cage. The source code is yours, deployment stays under your control. No lock-in."
+      }
+    }
+  },
+  "build": {
+    "eyebrow": "What we build",
+    "title": "Six application families. One method.",
+    "subtitle": "Each category builds on ready-to-deploy packs.",
+    "categories": {
+      "web": { "title": "Web apps", "body": "SaaS, dashboards, customer portals, B2B platforms." },
+      "mobile": { "title": "Mobile apps", "body": "iOS and Android, native or hybrid as needed." },
+      "internal": { "title": "Internal tools", "body": "Business workflows, automation, operational dashboards." },
+      "ai": { "title": "AI agents", "body": "Specialized assistants, business copilots, RAG on your data." },
+      "automation": { "title": "Automation", "body": "Pipelines, API integrations, document processing." },
+      "leadgen": { "title": "Lead generation", "body": "Prospecting tools, enrichment, AI qualification." }
+    },
+    "badge": "Pack ready"
+  },
+  "apps": {
+    "eyebrow": "Our work",
+    "title": "Already in production.",
+    "subtitle": "Three apps built with the Factory. Three different industries. One method.",
+    "items": {
+      "harold": {
+        "name": "Harold Project",
+        "category": "HR · Recruitment",
+        "description": "AI-augmented recruitment workspace to score, organize and accelerate sourcing.",
+        "cta": "Visit"
+      },
+      "telle": {
+        "name": "Tell-e / Sally",
+        "category": "E-commerce · AI",
+        "description": "Virtual personal shopper that turns e-commerce visitors into buyers with AI-driven personalized recommendations.",
+        "cta": "Visit"
+      },
+      "leo": {
+        "name": "LeO",
+        "category": "Sales · Lead Generation",
+        "description": "AI lead generation tool to identify, qualify and prioritize prospects at scale.",
+        "cta": "Coming soon"
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "title": "Four steps. Six weeks on average.",
+    "subtitle": "An iterative, transparent process. No nasty surprises.",
+    "steps": {
+      "discovery": {
+        "number": "01",
+        "title": "Discovery",
+        "duration": "30 min · Free",
+        "body": "We understand your business, your constraints, your goal. You leave with an honest opinion, even if we don't work together."
+      },
+      "selection": {
+        "number": "02",
+        "title": "Blueprint",
+        "duration": "1 week",
+        "body": "We map your current state: flows, costs, bottlenecks. Then we build an AI opportunity matrix — feasibility × impact. We pick the right modules to mobilize."
+      },
+      "customization": {
+        "number": "03",
+        "title": "AI customization",
+        "duration": "3 to 5 weeks",
+        "body": "We assemble, customize, train models on your data. You follow progress in real time."
+      },
+      "delivery": {
+        "number": "04",
+        "title": "Delivery & ownership",
+        "duration": "Continuous",
+        "body": "Source code is yours, secure deployment, team training. Optional ongoing support."
+      }
+    }
+  },
+  "forWho": {
+    "eyebrow": "Who it's for",
+    "title": "Built for teams that need to move fast.",
+    "personas": {
+      "pme": {
+        "title": "SMBs going digital",
+        "body": "You've spotted a business bottleneck. Excel and generic SaaS aren't enough anymore."
+      },
+      "startup": {
+        "title": "Startups & scale-ups",
+        "body": "You need to ship an MVP in weeks. Without mortgaging the future with massive technical debt."
+      },
+      "internal": {
+        "title": "Teams without devs",
+        "body": "You have the business expertise but no technical resources. We become your outsourced engineering team."
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "Let's talk",
+    "title": "Let's discuss your project.",
+    "subtitle": "30 minutes. No commitment. We'll honestly tell you what we can build — or what we can't.",
+    "button": "Book a discovery call",
+    "note": "Reply within 24 business hours."
+  },
+  "footer": {
+    "tagline": "Your custom app factory.",
+    "rights": "All rights reserved.",
+    "links": {
+      "legal": "Legal",
+      "privacy": "Privacy",
+      "contact": "Contact"
+    }
+  }
+}

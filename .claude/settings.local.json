@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:haroldproject.com)",
+      "WebFetch(domain:tell-e.tech)"
+    ]
+  }
+}

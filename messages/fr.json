@@ -1,0 +1,173 @@
+{
+  "meta": {
+    "title": "MyAppFactory — Votre usine à applications sur-mesure",
+    "description": "Des applications AI-native, taillées pour vous, livrées vite. Packs réutilisables et personnalisation IA pour les PME en digitalisation."
+  },
+  "header": {
+    "nav": {
+      "approach": "Approche",
+      "build": "Réalisations",
+      "process": "Processus",
+      "contact": "Contact"
+    },
+    "cta": "Réserver un appel"
+  },
+  "hero": {
+    "eyebrow": "Studio AI-native · Lancement 2026",
+    "title": "Votre usine à applications",
+    "titleAccent": "sur-mesure.",
+    "subtitle": "Ni un abonnement IA. Ni du dev classique. Une architecture pensée de zéro, à partir de briques éprouvées.",
+    "ctaPrimary": "Réserver un appel découverte",
+    "ctaSecondary": "Voir nos réalisations",
+    "stats": {
+      "speed": "6x plus rapide",
+      "speedLabel": "qu'un dev classique",
+      "packs": "Packs réutilisables",
+      "packsLabel": "prêts à personnaliser",
+      "ai": "AI-native",
+      "aiLabel": "par défaut, pas en option"
+    }
+  },
+  "problem": {
+    "eyebrow": "Le problème",
+    "title": "Les solutions actuelles ne tiennent plus la route.",
+    "subtitle": "Trois impasses qui freinent la digitalisation de votre PME.",
+    "cards": {
+      "generic": {
+        "title": "Les SaaS génériques",
+        "body": "Ils couvrent 60% de vos besoins. Les 40% qui font la différence — votre métier, vos workflows — restent dans Excel."
+      },
+      "custom": {
+        "title": "Le développement classique",
+        "body": "Six mois pour livrer un MVP. Trois ans de dette technique. Un budget qui double sans qu'on sache pourquoi."
+      },
+      "ai": {
+        "title": "L'IA greffée",
+        "body": "Un chatbot collé sur un site existant, ce n'est pas de l'IA-native. Greffée, elle vous fait gagner 10% de temps. Au cœur de l'architecture, elle multiplie votre capacité."
+      }
+    }
+  },
+  "approach": {
+    "eyebrow": "Notre approche",
+    "title": "La Factory : packs réutilisables + personnalisation IA.",
+    "subtitle": "On n'écrit pas chaque app depuis une page blanche. On assemble des modules industriels — auth, paiement, dashboards, agents IA — et on les ajuste à votre métier.",
+    "pillars": {
+      "modular": {
+        "title": "Briques éprouvées",
+        "body": "Une bibliothèque de modules déjà testés en production. Auth, paiement, CRM, dashboards, agents IA — assemblés, pas réécrits."
+      },
+      "aiNative": {
+        "title": "AI-native, pas patché",
+        "body": "L'IA est intégrée dès l'architecture, pas greffée à la fin. Agents, recherche sémantique, automatisations — natifs par conception."
+      },
+      "ownership": {
+        "title": "Vous gardez le contrôle",
+        "body": "Pas de cage dorée. Le code source vous appartient, le déploiement reste chez vous. Aucun lock-in."
+      }
+    }
+  },
+  "build": {
+    "eyebrow": "Ce qu'on construit",
+    "title": "Six familles d'applications. Une seule méthode.",
+    "subtitle": "Chaque catégorie s'appuie sur des packs prêts à déployer.",
+    "categories": {
+      "web": { "title": "Applications web", "body": "SaaS, dashboards, espaces client, portails B2B." },
+      "mobile": { "title": "Applications mobile", "body": "iOS et Android, natives ou hybrides selon le besoin." },
+      "internal": { "title": "Outils internes", "body": "Workflows métier, automatisations, dashboards opérationnels." },
+      "ai": { "title": "Agents IA", "body": "Assistants spécialisés, copilots métier, RAG sur vos données." },
+      "automation": { "title": "Automatisations", "body": "Pipelines, intégrations API, traitement de documents." },
+      "leadgen": { "title": "Lead generation", "body": "Outils de prospection, enrichissement, qualification IA." }
+    },
+    "badge": "Pack prêt"
+  },
+  "apps": {
+    "eyebrow": "Nos réalisations",
+    "title": "Déjà en production.",
+    "subtitle": "Trois apps construites avec la Factory. Trois métiers différents. Une seule méthode.",
+    "items": {
+      "harold": {
+        "name": "Harold Project",
+        "category": "RH · Recrutement",
+        "description": "Workspace de recrutement augmenté à l'IA pour scorer, organiser et accélérer le sourcing.",
+        "cta": "Découvrir"
+      },
+      "telle": {
+        "name": "Tell-e / Sally",
+        "category": "E-commerce · IA",
+        "description": "Personal shopper virtuel qui convertit les visiteurs e-commerce en acheteurs grâce à des recommandations IA personnalisées.",
+        "cta": "Découvrir"
+      },
+      "leo": {
+        "name": "LeO",
+        "category": "Sales · Lead Generation",
+        "description": "Outil de lead generation IA pour identifier, qualifier et prioriser vos prospects à grande échelle.",
+        "cta": "Bientôt en ligne"
+      }
+    }
+  },
+  "process": {
+    "eyebrow": "Comment ça marche",
+    "title": "Quatre étapes. Six semaines en moyenne.",
+    "subtitle": "Un processus itératif, transparent, sans mauvaises surprises.",
+    "steps": {
+      "discovery": {
+        "number": "01",
+        "title": "Découverte",
+        "duration": "30 min · Gratuit",
+        "body": "On comprend votre métier, vos contraintes, votre objectif. Vous repartez avec un avis honnête, même si on ne travaille pas ensemble."
+      },
+      "selection": {
+        "number": "02",
+        "title": "Blueprint",
+        "duration": "1 semaine",
+        "body": "Cartographie de votre état actuel : flux, coûts, goulots d'étranglement. Puis matrice d'opportunités IA — faisabilité × impact. On choisit les bons modules à mobiliser."
+      },
+      "customization": {
+        "number": "03",
+        "title": "Personnalisation IA",
+        "duration": "3 à 5 semaines",
+        "body": "On assemble, on personnalise, on entraîne les modèles sur vos données. Vous suivez l'avancement en temps réel."
+      },
+      "delivery": {
+        "number": "04",
+        "title": "Livraison & ownership",
+        "duration": "Continu",
+        "body": "Code source à vous, déploiement sécurisé, formation des équipes. Support continu en option."
+      }
+    }
+  },
+  "forWho": {
+    "eyebrow": "Pour qui",
+    "title": "Conçu pour les équipes qui veulent avancer vite.",
+    "personas": {
+      "pme": {
+        "title": "PME en digitalisation",
+        "body": "Vous avez identifié un goulot d'étranglement métier. Excel et les SaaS génériques ne suffisent plus."
+      },
+      "startup": {
+        "title": "Startups & scale-ups",
+        "body": "Vous devez livrer un MVP en quelques semaines. Sans hypothéquer la suite avec une dette technique massive."
+      },
+      "internal": {
+        "title": "Équipes sans dev",
+        "body": "Vous avez l'expertise métier mais pas les ressources techniques. On devient votre équipe d'ingénierie externalisée."
+      }
+    }
+  },
+  "cta": {
+    "eyebrow": "On en parle ?",
+    "title": "Parlons de votre projet.",
+    "subtitle": "30 minutes. Sans engagement. On vous dit honnêtement ce qu'on peut construire — ou pas.",
+    "button": "Réserver un appel découverte",
+    "note": "Réponse sous 24h ouvrées."
+  },
+  "footer": {
+    "tagline": "Votre usine à applications sur-mesure.",
+    "rights": "Tous droits réservés.",
+    "links": {
+      "legal": "Mentions légales",
+      "privacy": "Confidentialité",
+      "contact": "Contact"
+    }
+  }
+}
