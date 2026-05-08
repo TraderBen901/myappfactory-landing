@@ -26,7 +26,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-bg">
 
       {/* ── Vidéo + overlays ─────────────────────────────── */}
-      <div className="relative h-[85vh] w-full overflow-hidden">
+      <div className="relative h-[70vh] w-full overflow-hidden">
         <video
           ref={videoRef}
           autoPlay
@@ -49,9 +49,9 @@ export function Hero() {
 
         {/* ── Texte — overlay côté gauche ──────────────── */}
         <div className="absolute inset-0 flex items-center pt-16">
-          <div className="mr-auto w-full max-w-xl px-8 md:pl-20 lg:pl-32">
+          <div className="w-[48%] pl-12 md:pl-16 lg:pl-24">
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
@@ -59,10 +59,10 @@ export function Hero() {
             </motion.div>
 
             <motion.h1
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="mt-5 text-h1 font-semibold text-balance"
+              className="mt-5 text-h1 font-semibold"
             >
               {t('title')}{' '}
               <span className="relative inline-block text-accent">
@@ -72,24 +72,24 @@ export function Hero() {
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="mt-5 text-base text-text-muted text-balance md:text-lg"
+              className="mt-5 text-base text-text-muted md:text-lg"
             >
               {t('subtitle')}
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="mt-8 flex flex-wrap gap-3"
+              className="mt-8 flex items-center gap-3"
             >
-              <Button href="#contact" variant="primary" size="lg">
+              <Button href="#contact" variant="primary" size="md">
                 {t('ctaPrimary')}
               </Button>
-              <Button href="#work" variant="secondary" size="lg" arrow={false}>
+              <Button href="#work" variant="secondary" size="md" arrow={false}>
                 {t('ctaSecondary')}
               </Button>
             </motion.div>
