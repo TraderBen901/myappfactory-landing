@@ -23,7 +23,7 @@ export function Hero() {
   }, [videoSrc]);
 
   return (
-    <section className="relative overflow-hidden bg-bg">
+    <section className="relative overflow-hidden bg-bg pt-6 md:pt-10">
 
       {/* ── Vidéo + overlays ─────────────────────────────── */}
       <div className="relative h-[70vh] w-full overflow-hidden">
@@ -41,8 +41,8 @@ export function Hero() {
         {/* Fondu haut — transition depuis le header */}
         <div className="hero-fade-top pointer-events-none absolute inset-x-0 top-0 h-56" />
 
-        {/* Fondu bas — transition vers la section suivante */}
-        <div className="hero-fade-bottom pointer-events-none absolute inset-x-0 bottom-0 h-40" />
+        {/* Fondu bas — transition vers la section suivante (couvre aussi le bord vidéo) */}
+        <div className="hero-fade-bottom pointer-events-none absolute inset-x-0 -bottom-px h-56" />
 
         {/* Fondu gauche — zone de lisibilité pour le texte */}
         <div className="hero-fade-left pointer-events-none absolute inset-0" />
@@ -75,7 +75,7 @@ export function Hero() {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="mt-5 text-base text-text-muted md:text-lg"
+              className="mt-5 max-w-md text-base text-text-muted md:text-lg"
             >
               {t('subtitle')}
             </motion.p>
@@ -104,7 +104,7 @@ export function Hero() {
         transition={{ duration: 0.6, delay: 0.5 }}
         className="container-x"
       >
-        <div className="grid grid-cols-3 gap-6 border-t border-border py-10 md:py-12">
+        <div className="grid grid-cols-3 gap-6 py-10 md:py-12">
           <Stat label={t('stats.speedLabel')} value={t('stats.speed')} />
           <Stat label={t('stats.packsLabel')} value={t('stats.packs')} />
           <Stat label={t('stats.aiLabel')} value={t('stats.ai')} />
