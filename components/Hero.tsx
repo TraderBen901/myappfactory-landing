@@ -26,7 +26,7 @@ export function Hero() {
   }, [videoSrc]);
 
   return (
-    <section className="relative overflow-hidden pt-32 md:pt-40">
+    <section className="iso-grid relative overflow-hidden pt-32 md:pt-40">
       {/* Headline — dans le container */}
       <div className="container-x relative pb-14 md:pb-20">
         <div className="mx-auto max-w-4xl text-center">

@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --bg: #FBF9F3;
+  --bg: #F9F5EF;
   --surface: #FFFFFF;
-  --surface-2: #F2F0EA;
+  --surface-2: #F2EEE7;
   --text: #0A0A0A;
   --text-muted: #555550;
   --accent: #00A87E;
   --accent-2: #E53E3E;
-  --border: #E8E4DC;
+  --border: #E5DFD6;
 }
 
 .dark {
@@ -63,6 +63,43 @@ body {
   .dark .grid-bg {
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  }
+
+  /* Grille isométrique — lignes obliques à 30° qui prolongent la vidéo factory */
+  .iso-grid {
+    background-image:
+      repeating-linear-gradient(
+        120deg,
+        transparent 0px,
+        transparent 59px,
+        rgba(0, 0, 0, 0.07) 59px,
+        rgba(0, 0, 0, 0.07) 60px
+      ),
+      repeating-linear-gradient(
+        60deg,
+        transparent 0px,
+        transparent 59px,
+        rgba(0, 0, 0, 0.07) 59px,
+        rgba(0, 0, 0, 0.07) 60px
+      );
+  }
+
+  .dark .iso-grid {
+    background-image:
+      repeating-linear-gradient(
+        120deg,
+        transparent 0px,
+        transparent 59px,
+        rgba(255, 255, 255, 0.06) 59px,
+        rgba(255, 255, 255, 0.06) 60px
+      ),
+      repeating-linear-gradient(
+        60deg,
+        transparent 0px,
+        transparent 59px,
+        rgba(255, 255, 255, 0.06) 59px,
+        rgba(255, 255, 255, 0.06) 60px
+      );
   }
 
   .mono-label {
