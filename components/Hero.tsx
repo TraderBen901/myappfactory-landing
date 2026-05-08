@@ -18,25 +18,20 @@ export function Hero() {
   // Switch to '/animations/Video_Factory_dark.mp4' when ready
   const videoSrc =
     mounted && resolvedTheme === 'dark'
-      ? '/animations/Video_Factory_light.mp4'
+      ? '/animations/Video_Factory_light.mp4' // TODO: replace with dark version
       : '/animations/Video_Factory_light.mp4';
 
-  // Reload video when src changes (theme switch)
   useEffect(() => {
     videoRef.current?.load();
   }, [videoSrc]);
 
   return (
-    <section className="relative overflow-hidden pt-32 pb-16 md:pt-40 md:pb-24">
-      {/* Grid background */}
-      <div className="pointer-events-none absolute inset-0 grid-bg [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
+    <section className="relative overflow-hidden pt-32 md:pt-40">
+      {/* Subtle grid — continuité avec la vidéo */}
+      <div className="pointer-events-none absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(ellipse_at_top,black_40%,transparent_80%)]" />
 
-      {/* Glow */}
-      <div className="pointer-events-none absolute left-1/2 top-0 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-accent/10 blur-[140px]" />
-
-      <div className="container-x relative">
-
-        {/* Centered headline */}
+      {/* Headline — dans le container */}
+      <div className="container-x relative pb-14 md:pb-20">
         <div className="mx-auto max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -83,47 +78,41 @@ export function Hero() {
             </Button>
           </motion.div>
         </div>
+      </div>
 
-        {/* Video — full width */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45 }}
-          className="mt-16 md:mt-20"
+      {/* Vidéo — pleine largeur, sans cadre ni ombre */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.4 }}
+        className="w-full"
+      >
+        <video
+          ref={videoRef}
+          key={videoSrc}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="aspect-video w-full object-cover"
         >
-          <div className="relative w-full overflow-hidden rounded-2xl border border-border shadow-2xl shadow-black/20">
-            {/* Corner brackets */}
-            <Corner pos="top-3 left-3" />
-            <Corner pos="top-3 right-3" rotate="rotate-90" />
-            <Corner pos="bottom-3 right-3" rotate="rotate-180" />
-            <Corner pos="bottom-3 left-3" rotate="-rotate-90" />
+          <source src={videoSrc} type="video/mp4" />
+        </video>
+      </motion.div>
 
-            <video
-              ref={videoRef}
-              key={videoSrc}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="aspect-video w-full object-cover"
-            >
-              <source src={videoSrc} type="video/mp4" />
-            </video>
-          </div>
-        </motion.div>
-
-        {/* Stats below video */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-          className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-8 md:mt-16"
-        >
+      {/* Stats — sous la vidéo, dans le container */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, delay: 0.7 }}
+        className="container-x"
+      >
+        <div className="grid grid-cols-3 gap-6 border-t border-border py-10 md:py-14">
           <Stat label={t('stats.speedLabel')} value={t('stats.speed')} />
           <Stat label={t('stats.packsLabel')} value={t('stats.packs')} />
           <Stat label={t('stats.aiLabel')} value={t('stats.ai')} />
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 }
@@ -135,14 +124,6 @@ function Stat({ label, value }: { label: string; value: string }) {
         {value}
       </div>
       <div className="mt-1 text-xs uppercase tracking-widest text-text-muted">{label}</div>
-    </div>
-  );
-}
-
-function Corner({ pos, rotate = '' }: { pos: string; rotate?: string }) {
-  return (
-    <div className={`absolute z-10 ${pos} h-4 w-4 ${rotate}`}>
-      <span className="absolute inset-0 border-l-2 border-t-2 border-accent/60" />
     </div>
   );
 }
