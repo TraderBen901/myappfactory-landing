@@ -65,41 +65,38 @@ body {
       linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
   }
 
-  /* Grille isométrique — lignes obliques à 30° qui prolongent la vidéo factory */
-  .iso-grid {
-    background-image:
-      repeating-linear-gradient(
-        120deg,
-        transparent 0px,
-        transparent 59px,
-        rgba(0, 0, 0, 0.07) 59px,
-        rgba(0, 0, 0, 0.07) 60px
-      ),
-      repeating-linear-gradient(
-        60deg,
-        transparent 0px,
-        transparent 59px,
-        rgba(0, 0, 0, 0.07) 59px,
-        rgba(0, 0, 0, 0.07) 60px
-      );
+  /* Dégradés hero — fondus sur les bords de la vidéo */
+  .hero-fade-top {
+    background: linear-gradient(to bottom, #F9F5EF 0%, transparent 100%);
+  }
+  .dark .hero-fade-top {
+    background: linear-gradient(to bottom, #0A0A0A 0%, transparent 100%);
   }
 
-  .dark .iso-grid {
-    background-image:
-      repeating-linear-gradient(
-        120deg,
-        transparent 0px,
-        transparent 59px,
-        rgba(255, 255, 255, 0.06) 59px,
-        rgba(255, 255, 255, 0.06) 60px
-      ),
-      repeating-linear-gradient(
-        60deg,
-        transparent 0px,
-        transparent 59px,
-        rgba(255, 255, 255, 0.06) 59px,
-        rgba(255, 255, 255, 0.06) 60px
-      );
+  .hero-fade-bottom {
+    background: linear-gradient(to top, #F9F5EF 0%, transparent 100%);
+  }
+  .dark .hero-fade-bottom {
+    background: linear-gradient(to top, #0A0A0A 0%, transparent 100%);
+  }
+
+  .hero-fade-left {
+    background: linear-gradient(
+      to right,
+      #F9F5EF 28%,
+      rgba(249, 245, 239, 0.85) 48%,
+      rgba(249, 245, 239, 0.3) 65%,
+      transparent 80%
+    );
+  }
+  .dark .hero-fade-left {
+    background: linear-gradient(
+      to right,
+      #0A0A0A 28%,
+      rgba(10, 10, 10, 0.85) 48%,
+      rgba(10, 10, 10, 0.3) 65%,
+      transparent 80%
+    );
   }
 
   .mono-label {

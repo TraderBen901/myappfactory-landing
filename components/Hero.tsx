@@ -15,78 +15,20 @@ export function Hero() {
 
   useEffect(() => setMounted(true), []);
 
-  // Switch to '/animations/Video_Factory_dark.mp4' when ready
-  const videoSrc =
-    mounted && resolvedTheme === 'dark'
-      ? '/animations/Video_Factory_light.mp4' // TODO: replace with dark version
-      : '/animations/Video_Factory_light.mp4';
+  // TODO: remplacer par '/animations/Video_Factory_dark.mp4' quand disponible
+  const videoSrc = '/animations/Video_Factory_light.mp4';
 
   useEffect(() => {
     videoRef.current?.load();
   }, [videoSrc]);
 
   return (
-    <section className="iso-grid relative overflow-hidden pt-32 md:pt-40">
-      {/* Headline — dans le container */}
-      <div className="container-x relative pb-14 md:pb-20">
-        <div className="mx-auto max-w-4xl text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex justify-center"
-          >
-            <SectionLabel>{t('eyebrow')}</SectionLabel>
-          </motion.div>
+    <section className="relative overflow-hidden bg-bg">
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="mt-6 text-display font-semibold text-balance"
-          >
-            {t('title')}{' '}
-            <span className="relative inline-block text-accent">
-              {t('titleAccent')}
-              <span className="absolute -bottom-1 left-0 h-1 w-full bg-accent/30" />
-            </span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-6 text-lg text-text-muted text-balance md:text-xl"
-          >
-            {t('subtitle')}
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-10 flex flex-wrap items-center justify-center gap-3"
-          >
-            <Button href="#contact" variant="primary" size="lg">
-              {t('ctaPrimary')}
-            </Button>
-            <Button href="#work" variant="secondary" size="lg" arrow={false}>
-              {t('ctaSecondary')}
-            </Button>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Vidéo — pleine largeur, sans cadre ni ombre */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.4 }}
-        className="w-full"
-      >
+      {/* ── Vidéo + overlays ─────────────────────────────── */}
+      <div className="relative w-full">
         <video
           ref={videoRef}
-          key={videoSrc}
           autoPlay
           loop
           muted
@@ -95,21 +37,80 @@ export function Hero() {
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
-      </motion.div>
 
-      {/* Stats — sous la vidéo, dans le container */}
+        {/* Fondu haut — transition depuis le header */}
+        <div className="hero-fade-top pointer-events-none absolute inset-x-0 top-0 h-56" />
+
+        {/* Fondu bas — transition vers la section suivante */}
+        <div className="hero-fade-bottom pointer-events-none absolute inset-x-0 bottom-0 h-40" />
+
+        {/* Fondu gauche — zone de lisibilité pour le texte */}
+        <div className="hero-fade-left pointer-events-none absolute inset-0" />
+
+        {/* ── Texte — overlay côté gauche ──────────────── */}
+        <div className="absolute inset-0 flex items-center pt-16">
+          <div className="mr-auto w-full max-w-lg px-8 md:pl-16 lg:pl-24">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <SectionLabel>{t('eyebrow')}</SectionLabel>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="mt-5 text-h1 font-semibold text-balance"
+            >
+              {t('title')}{' '}
+              <span className="relative inline-block text-accent">
+                {t('titleAccent')}
+                <span className="absolute -bottom-1 left-0 h-1 w-full bg-accent/30" />
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="mt-5 text-base text-text-muted text-balance md:text-lg"
+            >
+              {t('subtitle')}
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="mt-8 flex flex-wrap gap-3"
+            >
+              <Button href="#contact" variant="primary" size="lg">
+                {t('ctaPrimary')}
+              </Button>
+              <Button href="#work" variant="secondary" size="lg" arrow={false}>
+                {t('ctaSecondary')}
+              </Button>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* ── Stats — sous la vidéo ─────────────────────── */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.7 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
         className="container-x"
       >
-        <div className="grid grid-cols-3 gap-6 border-t border-border py-10 md:py-14">
+        <div className="grid grid-cols-3 gap-6 border-t border-border py-10 md:py-12">
           <Stat label={t('stats.speedLabel')} value={t('stats.speed')} />
           <Stat label={t('stats.packsLabel')} value={t('stats.packs')} />
           <Stat label={t('stats.aiLabel')} value={t('stats.ai')} />
         </div>
       </motion.div>
+
     </section>
   );
 }
