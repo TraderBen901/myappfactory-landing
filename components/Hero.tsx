@@ -26,14 +26,14 @@ export function Hero() {
     <section className="relative overflow-hidden bg-bg">
 
       {/* ── Vidéo + overlays ─────────────────────────────── */}
-      <div className="relative w-full">
+      <div className="relative h-[85vh] w-full overflow-hidden">
         <video
           ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
-          className="aspect-video w-full object-cover"
+          className="h-full w-full object-cover"
         >
           <source src={videoSrc} type="video/mp4" />
         </video>
@@ -49,7 +49,7 @@ export function Hero() {
 
         {/* ── Texte — overlay côté gauche ──────────────── */}
         <div className="absolute inset-0 flex items-center pt-16">
-          <div className="mr-auto w-full max-w-lg px-8 md:pl-16 lg:pl-24">
+          <div className="mr-auto w-full max-w-xl px-8 md:pl-20 lg:pl-32">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}

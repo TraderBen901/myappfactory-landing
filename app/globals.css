@@ -83,19 +83,19 @@ body {
   .hero-fade-left {
     background: linear-gradient(
       to right,
-      #F9F5EF 28%,
-      rgba(249, 245, 239, 0.85) 48%,
-      rgba(249, 245, 239, 0.3) 65%,
-      transparent 80%
+      #F9F5EF 14%,
+      rgba(249, 245, 239, 0.72) 34%,
+      rgba(249, 245, 239, 0.12) 55%,
+      transparent 70%
     );
   }
   .dark .hero-fade-left {
     background: linear-gradient(
       to right,
-      #0A0A0A 28%,
-      rgba(10, 10, 10, 0.85) 48%,
-      rgba(10, 10, 10, 0.3) 65%,
-      transparent 80%
+      #0A0A0A 14%,
+      rgba(10, 10, 10, 0.72) 34%,
+      rgba(10, 10, 10, 0.12) 55%,
+      transparent 70%
     );
   }
 
