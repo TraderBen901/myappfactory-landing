@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --bg: #F0EDEA;
-  --surface: #F7F5F2;
-  --surface-2: #EAE7E3;
+  --bg: #FBF9F3;
+  --surface: #FFFFFF;
+  --surface-2: #F2F0EA;
   --text: #0A0A0A;
   --text-muted: #555550;
   --accent: #00A87E;
   --accent-2: #E53E3E;
-  --border: #DDD9D4;
+  --border: #E8E4DC;
 }
 
 .dark {

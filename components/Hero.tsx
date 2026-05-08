@@ -27,9 +27,6 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden pt-32 md:pt-40">
-      {/* Subtle grid — continuité avec la vidéo */}
-      <div className="pointer-events-none absolute inset-0 grid-bg opacity-40 [mask-image:radial-gradient(ellipse_at_top,black_40%,transparent_80%)]" />
-
       {/* Headline — dans le container */}
       <div className="container-x relative pb-14 md:pb-20">
         <div className="mx-auto max-w-4xl text-center">
