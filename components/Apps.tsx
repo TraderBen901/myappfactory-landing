@@ -3,12 +3,13 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import { useState } from 'react';
 import { SectionLabel } from './ui/SectionLabel';
 
 type AppItem = {
   key: 'harold' | 'telle' | 'leo';
-  href: string | null;
-  external: boolean;
+  href: string;
+  image: string;
   accentClass: string;
 };
 
@@ -16,19 +17,19 @@ const apps: AppItem[] = [
   {
     key: 'harold',
     href: 'https://haroldproject.com',
-    external: true,
+    image: '/apps/harold.png',
     accentClass: 'from-accent/15 to-transparent',
   },
   {
     key: 'telle',
     href: 'https://tell-e.tech',
-    external: true,
+    image: '/apps/sally.png',
     accentClass: 'from-accent-2/15 to-transparent',
   },
   {
     key: 'leo',
-    href: null,
-    external: false,
+    href: 'https://www.leoproject.live',
+    image: '/apps/leo.png',
     accentClass: 'from-accent/15 to-transparent',
   },
 ];
@@ -66,21 +67,8 @@ function AppCard({
   index: number;
   t: ReturnType<typeof useTranslations>;
 }) {
-  const Wrapper = ({ children }: { children: React.ReactNode }) =>
-    app.href ? (
-      <a
-        href={app.href}
-        target={app.external ? '_blank' : undefined}
-        rel={app.external ? 'noopener noreferrer' : undefined}
-        className="block h-full"
-      >
-        {children}
-      </a>
-    ) : (
-      <div className="block h-full cursor-default">{children}</div>
-    );
-
-  const isLive = app.href !== null;
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageError, setImageError] = useState(false);
 
   return (
     <motion.div
@@ -89,34 +77,49 @@ function AppCard({
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
-      <Wrapper>
-        <article className="group relative h-full overflow-hidden rounded-2xl border border-border bg-bg transition hover:border-accent/40">
-          {/* Visual area — placeholder for screenshot */}
+      <a
+        href={app.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block h-full"
+      >
+        <article className="group relative h-full overflow-hidden rounded-2xl border border-border bg-bg transition hover:border-accent/40 hover:shadow-lg hover:shadow-black/5">
+          {/* Screenshot area */}
           <div className="relative aspect-[16/10] overflow-hidden border-b border-border bg-surface-2">
+            {/* Gradient fallback / behind image */}
             <div className={`absolute inset-0 bg-gradient-to-br ${app.accentClass}`} />
-            <div className="absolute inset-0 grid-bg opacity-50" />
 
-            {/* Screenshot placeholder */}
-            <div className="absolute inset-0 flex items-center justify-center p-6">
-              <div className="rounded-lg border border-border bg-surface/80 px-4 py-2 backdrop-blur-sm">
-                <p className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
-                  /public/apps/{app.key}.png
-                </p>
+            {/* Screenshot — only render if not errored */}
+            {!imageError && (
+              <img
+                src={app.image}
+                alt={`${t(`items.${app.key}.name`)} preview`}
+                loading="lazy"
+                onLoad={() => setImageLoaded(true)}
+                onError={() => setImageError(true)}
+                className={`absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-500 group-hover:scale-[1.02] ${
+                  imageLoaded ? 'opacity-100' : 'opacity-0'
+                }`}
+              />
+            )}
+
+            {/* Placeholder when no image */}
+            {(imageError || !imageLoaded) && (
+              <div className="absolute inset-0 flex items-center justify-center p-6">
+                <div className="rounded-lg border border-border bg-surface/80 px-4 py-2 backdrop-blur-sm">
+                  <p className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
+                    {app.image}
+                  </p>
+                </div>
               </div>
-            </div>
+            )}
 
-            {/* Status badge */}
-            <div className="absolute left-4 top-4">
-              {isLive ? (
-                <span className="flex items-center gap-1.5 rounded-full border border-accent/30 bg-bg/90 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-accent backdrop-blur-sm">
-                  <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
-                  Live
-                </span>
-              ) : (
-                <span className="flex items-center gap-1.5 rounded-full border border-border bg-bg/90 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-text-muted backdrop-blur-sm">
-                  Soon
-                </span>
-              )}
+            {/* Live badge */}
+            <div className="absolute left-4 top-4 z-10">
+              <span className="flex items-center gap-1.5 rounded-full border border-accent/30 bg-bg/90 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-accent backdrop-blur-sm">
+                <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
+                Live
+              </span>
             </div>
           </div>
 
@@ -129,16 +132,14 @@ function AppCard({
               <h3 className="text-xl font-semibold tracking-tight">
                 {t(`items.${app.key}.name`)}
               </h3>
-              {isLive && (
-                <ArrowUpRight className="h-5 w-5 text-text-muted transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
-              )}
+              <ArrowUpRight className="h-5 w-5 text-text-muted transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
             </div>
             <p className="mt-3 text-sm text-text-muted">
               {t(`items.${app.key}.description`)}
             </p>
           </div>
         </article>
-      </Wrapper>
+      </a>
     </motion.div>
   );
 }

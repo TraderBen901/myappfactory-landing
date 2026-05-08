@@ -86,13 +86,13 @@
     "subtitle": "Three apps built with the Factory. Three different industries. One method.",
     "items": {
       "harold": {
-        "name": "Harold Project",
+        "name": "Tell-E/HaRold",
         "category": "HR · Recruitment",
         "description": "AI-augmented recruitment workspace to score, organize and accelerate sourcing.",
         "cta": "Visit"
       },
       "telle": {
-        "name": "Tell-e / Sally",
+        "name": "SaLLy",
         "category": "E-commerce · AI",
         "description": "Virtual personal shopper that turns e-commerce visitors into buyers with AI-driven personalized recommendations.",
         "cta": "Visit"
@@ -101,7 +101,7 @@
         "name": "LeO",
         "category": "Sales · Lead Generation",
         "description": "AI lead generation tool to identify, qualify and prioritize prospects at scale.",
-        "cta": "Coming soon"
+        "cta": "Visit"
       }
     }
   },
