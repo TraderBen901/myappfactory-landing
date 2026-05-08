@@ -351,13 +351,13 @@ function Chip({
     <button
       type="button"
       onClick={onClick}
-      className={`flex items-center gap-2 rounded-full border px-3.5 py-1.5 text-sm transition ${
+      className={`flex min-h-[44px] items-center gap-2 rounded-full border px-4 text-sm transition sm:min-h-0 sm:py-2 ${
         active
           ? 'border-accent bg-accent/10 text-accent'
           : 'border-border bg-bg text-text-muted hover:border-accent/40 hover:text-text'
       }`}
     >
-      {Icon && <Icon className="h-3.5 w-3.5" />}
+      {Icon && <Icon className="h-3.5 w-3.5 shrink-0" />}
       <span>{label}</span>
     </button>
   );
