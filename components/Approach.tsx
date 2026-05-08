@@ -37,17 +37,14 @@ export function Approach() {
               TODO: ajouter version dark quand disponible
               (ex: Video_Factory_dark_One_module.mp4 + theme switch)
             */}
-            <div
-              className="relative aspect-video w-full overflow-hidden rounded-xl border border-border bg-bg [transform:translateZ(0)] [isolation:isolate]"
-              style={{ willChange: 'transform' }}
-            >
+            <div className="relative mx-auto aspect-square w-full max-w-xl overflow-hidden rounded-xl border border-border bg-bg">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
                 className="absolute inset-0 h-full w-full object-cover"
-                style={{ transform: 'scale(1.02) translateZ(0)', backgroundColor: '#F9F5EF' }}
+                style={{ transform: 'scale(1.78)' }}
               >
                 <source src="/animations/Video_Factory_ight_One_module.mp4" type="video/mp4" />
               </video>
