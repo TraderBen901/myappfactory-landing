@@ -4,7 +4,6 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Boxes, Cpu, Key } from 'lucide-react';
 import { SectionLabel } from './ui/SectionLabel';
-import { AnimationSlot } from './ui/AnimationSlot';
 
 export function Approach() {
   const t = useTranslations('approach');
@@ -26,7 +25,7 @@ export function Approach() {
             <p className="mt-5 text-lg text-text-muted text-balance">{t('subtitle')}</p>
           </div>
 
-          {/* Right: animation slot */}
+          {/* Right: video — One Module */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -34,12 +33,21 @@ export function Approach() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
-            <AnimationSlot
-              id="approach-factory"
-              ratio="aspect-[16/10]"
-              label="ANIMATION ISOMÉTRIQUE — schéma factory"
-              hint="Convoyeur + bras robotiques + modules"
-            />
+            {/*
+              TODO: ajouter version dark quand disponible
+              (ex: Video_Factory_dark_One_module.mp4 + theme switch)
+            */}
+            <div className="relative aspect-video w-full overflow-hidden rounded-xl border border-border bg-bg">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="h-full w-full object-cover"
+              >
+                <source src="/animations/Video_Factory_ight_One_module.mp4" type="video/mp4" />
+              </video>
+            </div>
           </motion.div>
         </div>
 
