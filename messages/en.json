@@ -156,10 +156,58 @@
   },
   "cta": {
     "eyebrow": "Let's talk",
-    "title": "Let's discuss your project.",
+    "title": "Ready for takeoff?",
     "subtitle": "30 minutes. No commitment. We'll honestly tell you what we can build — or what we can't.",
-    "button": "Book a discovery call",
-    "note": "Reply within 24 business hours."
+    "expectations": {
+      "title": "What to expect",
+      "list": [
+        "Free 30-minute consultation",
+        "Reply within 24 business hours",
+        "Project scoping with no commitment",
+        "Transparent pricing from day one"
+      ]
+    },
+    "emailFallback": {
+      "label": "Prefer to send an email?",
+      "address": "benoit.schiepers@gmail.com"
+    },
+    "form": {
+      "progress": "Progress",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your full name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@company.com",
+      "websiteLabel": "Website",
+      "websitePlaceholder": "https://yourcompany.com",
+      "servicesLabel": "Services of interest",
+      "timelineLabel": "Project timeline",
+      "challengeLabel": "Main challenge",
+      "challengePlaceholder": "What problem do you want to solve with AI?",
+      "budgetLabel": "Estimated budget",
+      "submit": "Book my free consultation",
+      "services": {
+        "web": "Web App",
+        "mobile": "Mobile App",
+        "internal": "Internal Tool",
+        "ai": "AI Agents",
+        "automation": "Automation",
+        "leadgen": "Lead Generation",
+        "audit": "Audit / Strategy",
+        "custom": "Custom / Other"
+      },
+      "timeline": {
+        "asap": "ASAP",
+        "13": "1-3 months",
+        "36": "3-6 months",
+        "explore": "Exploring"
+      },
+      "budget": {
+        "s": "< €15k",
+        "m": "€15k - €40k",
+        "l": "€40k - €80k",
+        "xl": "€80k+"
+      }
+    }
   },
   "footer": {
     "tagline": "Your custom app factory.",

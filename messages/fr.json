@@ -156,10 +156,58 @@
   },
   "cta": {
     "eyebrow": "On en parle ?",
-    "title": "Parlons de votre projet.",
+    "title": "Prêt pour le décollage ?",
     "subtitle": "30 minutes. Sans engagement. On vous dit honnêtement ce qu'on peut construire — ou pas.",
-    "button": "Réserver un appel découverte",
-    "note": "Réponse sous 24h ouvrées."
+    "expectations": {
+      "title": "À quoi s'attendre",
+      "list": [
+        "Consultation gratuite de 30 minutes",
+        "Réponse sous 24 heures ouvrées",
+        "Cadrage de projet sans engagement",
+        "Tarification transparente dès le départ"
+      ]
+    },
+    "emailFallback": {
+      "label": "Vous préférez envoyer un email ?",
+      "address": "benoit.schiepers@gmail.com"
+    },
+    "form": {
+      "progress": "Progression",
+      "nameLabel": "Nom",
+      "namePlaceholder": "Votre nom complet",
+      "emailLabel": "Email",
+      "emailPlaceholder": "vous@entreprise.com",
+      "websiteLabel": "Site web",
+      "websitePlaceholder": "https://votreentreprise.com",
+      "servicesLabel": "Services d'intérêt",
+      "timelineLabel": "Délai du projet",
+      "challengeLabel": "Défi principal",
+      "challengePlaceholder": "Quel problème souhaitez-vous résoudre avec l'IA ?",
+      "budgetLabel": "Budget estimé",
+      "submit": "Réserver ma consultation gratuite",
+      "services": {
+        "web": "Web App",
+        "mobile": "Mobile App",
+        "internal": "Outil interne",
+        "ai": "Agents IA",
+        "automation": "Automatisations",
+        "leadgen": "Lead Generation",
+        "audit": "Audit / Stratégie",
+        "custom": "Sur-mesure / Autre"
+      },
+      "timeline": {
+        "asap": "ASAP",
+        "13": "1-3 mois",
+        "36": "3-6 mois",
+        "explore": "Exploration"
+      },
+      "budget": {
+        "s": "< 15k€",
+        "m": "15k - 40k€",
+        "l": "40k - 80k€",
+        "xl": "80k+ €"
+      }
+    }
   },
   "footer": {
     "tagline": "Votre usine à applications sur-mesure.",
