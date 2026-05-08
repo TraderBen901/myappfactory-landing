@@ -17,7 +17,7 @@ export function Approach() {
   return (
     <section id="approach" className="relative border-t border-border bg-surface py-24 md:py-32">
       <div className="container-x">
-        <div className="grid gap-12 lg:grid-cols-12">
+        <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
           {/* Left: copy */}
           <div className="lg:col-span-5">
             <SectionLabel>{t('eyebrow')}</SectionLabel>
@@ -37,14 +37,13 @@ export function Approach() {
               TODO: ajouter version dark quand disponible
               (ex: Video_Factory_dark_One_module.mp4 + theme switch)
             */}
-            <div className="relative mx-auto aspect-square w-full max-w-xl overflow-hidden rounded-xl border border-border bg-bg">
+            <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-xl border border-border bg-bg">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
                 className="absolute inset-0 h-full w-full object-cover"
-                style={{ transform: 'scale(1.78)' }}
               >
                 <source src="/animations/Video_Factory_ight_One_module.mp4" type="video/mp4" />
               </video>
