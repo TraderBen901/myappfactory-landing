@@ -43,7 +43,7 @@ export function Approach() {
                 loop
                 muted
                 playsInline
-                className="h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full scale-[1.01] object-cover"
               >
                 <source src="/animations/Video_Factory_ight_One_module.mp4" type="video/mp4" />
               </video>
