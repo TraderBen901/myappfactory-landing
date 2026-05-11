@@ -47,6 +47,10 @@
       }
     }
   },
+  "manifesto": {
+    "part1": "Construisez votre logiciel,",
+    "part2": "ne l'achetez pas."
+  },
   "approach": {
     "eyebrow": "Notre approche",
     "title": "La Factory : packs réutilisables + personnalisation IA.",

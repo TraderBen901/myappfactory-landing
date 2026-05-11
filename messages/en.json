@@ -47,6 +47,10 @@
       }
     }
   },
+  "manifesto": {
+    "part1": "Build your software,",
+    "part2": "don't buy your software."
+  },
   "approach": {
     "eyebrow": "Our approach",
     "title": "The Factory: reusable packs + AI customization.",

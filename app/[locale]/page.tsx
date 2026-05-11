@@ -1,6 +1,7 @@
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { Problem } from '@/components/Problem';
+import { Manifesto } from '@/components/Manifesto';
 import { Approach } from '@/components/Approach';
 import { WhatWeBuild } from '@/components/WhatWeBuild';
 import { Apps } from '@/components/Apps';
@@ -16,6 +17,7 @@ export default function HomePage() {
       <main className="relative">
         <Hero />
         <Problem />
+        <Manifesto />
         <Approach />
         <WhatWeBuild />
         <Apps />
