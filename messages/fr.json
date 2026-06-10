@@ -8,6 +8,7 @@
       "approach": "Approche",
       "build": "Réalisations",
       "process": "Processus",
+      "training": "Formations",
       "contact": "Contact"
     },
     "cta": "Réserver un appel"
@@ -155,6 +156,49 @@
       "internal": {
         "title": "Équipes sans dev",
         "body": "Vous avez l'expertise métier mais pas les ressources techniques. On devient votre équipe d'ingénierie externalisée."
+      }
+    }
+  },
+  "training": {
+    "eyebrow": "Formations IA",
+    "title": "Trois niveaux pour passer de l'usage à la maîtrise.",
+    "subtitle": "MyAppFactory forme vos équipes à comprendre, automatiser et piloter l'IA dans leur métier — avec des ateliers concrets, pas de théorie abstraite.",
+    "academyLabel": "MyAppFactory Academy",
+    "academyTitle": "La formation comme accélérateur de vos projets AI-native.",
+    "academyBody": "Vous pouvez commencer par former vos équipes, prolonger par un Blueprint, ou combiner Build + Training pour livrer l'outil et l'adoption en même temps.",
+    "forWhom": "Pour qui",
+    "result": "Résultat",
+    "outcomesTitle": "À la fin, vos équipes savent où l'IA crée vraiment de la valeur.",
+    "cta": "Parler formation",
+    "outcomes": {
+      "outcome1": "Une lecture claire des cas d'usage IA pertinents pour votre métier.",
+      "outcome2": "Des prompts, workflows ou prototypes réutilisables dès le lendemain.",
+      "outcome3": "Une méthode pour cadrer les risques, les données et le ROI."
+    },
+    "levels": {
+      "level1": {
+        "label": "Level 1 · Débutant",
+        "title": "IA Essentielle",
+        "duration": "½ à 1 jour",
+        "body": "Comprendre l'IA générative, utiliser les bons outils et gagner du temps sur les tâches quotidiennes : emails, documents, réunions, recherche, synthèse.",
+        "audience": "Dirigeants, équipes métier, profils non techniques.",
+        "result": "Autonomie individuelle et bibliothèque de prompts métier."
+      },
+      "level2": {
+        "label": "Level 2 · Intermédiaire",
+        "title": "Workflow IA",
+        "duration": "1 à 2 jours",
+        "body": "Transformer les tâches répétitives en workflows IA : formulaires, documents, CRM, Google Sheets, Notion, Airtable, n8n, Make ou Zapier.",
+        "audience": "Responsables opérationnels, sales, marketing, RH, admin, consultants.",
+        "result": "Un workflow concret et une matrice d'opportunités IA."
+      },
+      "level3": {
+        "label": "Level 3 · Pro",
+        "title": "AI-native Pro",
+        "duration": "2 à 5 jours",
+        "body": "Concevoir des systèmes IA intégrés : agents spécialisés, RAG sur vos données, intégrations API, évaluation, sécurité, déploiement et monitoring.",
+        "audience": "Profils avancés, consultants IA, product managers, CTO, équipes tech/no-code.",
+        "result": "Architecture cible ou prototype prêt à industrialiser."
       }
     }
   },

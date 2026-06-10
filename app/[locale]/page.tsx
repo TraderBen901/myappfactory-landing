@@ -7,6 +7,7 @@ import { WhatWeBuild } from '@/components/WhatWeBuild';
 import { Apps } from '@/components/Apps';
 import { Process } from '@/components/Process';
 import { ForWho } from '@/components/ForWho';
+import { Training } from '@/components/Training';
 import { FinalCTA } from '@/components/FinalCTA';
 import { Footer } from '@/components/Footer';
 
@@ -23,6 +24,7 @@ export default function HomePage() {
         <Apps />
         <Process />
         <ForWho />
+        <Training />
         <FinalCTA />
       </main>
       <Footer />

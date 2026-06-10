@@ -34,6 +34,7 @@ export function Header() {
     { href: '#approach', label: t('nav.approach') },
     { href: '#work', label: t('nav.build') },
     { href: '#process', label: t('nav.process') },
+    { href: '#training', label: t('nav.training') },
     { href: '#contact', label: t('nav.contact') },
   ];
 

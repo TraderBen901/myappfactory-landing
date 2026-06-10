@@ -8,6 +8,7 @@
       "approach": "Approach",
       "build": "Work",
       "process": "Process",
+      "training": "Training",
       "contact": "Contact"
     },
     "cta": "Book a call"
@@ -155,6 +156,49 @@
       "internal": {
         "title": "Teams without devs",
         "body": "You have the business expertise but no technical resources. We become your outsourced engineering team."
+      }
+    }
+  },
+  "training": {
+    "eyebrow": "AI training",
+    "title": "Three levels to move from usage to mastery.",
+    "subtitle": "MyAppFactory trains your teams to understand, automate and operate AI in their own workflows — with practical workshops, not abstract theory.",
+    "academyLabel": "MyAppFactory Academy",
+    "academyTitle": "Training as an accelerator for your AI-native projects.",
+    "academyBody": "Start by upskilling your team, extend with a Blueprint, or combine Build + Training to deliver the tool and the adoption plan together.",
+    "forWhom": "For whom",
+    "result": "Result",
+    "outcomesTitle": "By the end, your teams know where AI truly creates value.",
+    "cta": "Talk training",
+    "outcomes": {
+      "outcome1": "A clear view of the AI use cases that matter for your business.",
+      "outcome2": "Prompts, workflows or prototypes reusable the next day.",
+      "outcome3": "A method to frame risks, data and ROI."
+    },
+    "levels": {
+      "level1": {
+        "label": "Level 1 · Beginner",
+        "title": "AI Essentials",
+        "duration": "½ to 1 day",
+        "body": "Understand generative AI, use the right tools and save time on daily tasks: emails, documents, meetings, research and synthesis.",
+        "audience": "Leaders, business teams and non-technical profiles.",
+        "result": "Individual autonomy and a business prompt library."
+      },
+      "level2": {
+        "label": "Level 2 · Intermediate",
+        "title": "AI Workflow",
+        "duration": "1 to 2 days",
+        "body": "Turn repetitive tasks into AI workflows: forms, documents, CRM, Google Sheets, Notion, Airtable, n8n, Make or Zapier.",
+        "audience": "Operations, sales, marketing, HR, admin teams and consultants.",
+        "result": "One concrete workflow and an AI opportunity matrix."
+      },
+      "level3": {
+        "label": "Level 3 · Pro",
+        "title": "AI-native Pro",
+        "duration": "2 to 5 days",
+        "body": "Design integrated AI systems: specialized agents, RAG on your data, API integrations, evaluation, security, deployment and monitoring.",
+        "audience": "Advanced profiles, AI consultants, product managers, CTOs, tech/no-code teams.",
+        "result": "A target architecture or prototype ready to industrialize."
       }
     }
   },
