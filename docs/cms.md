@@ -21,7 +21,7 @@ This project uses **Sanity Studio** as the headless CMS foundation.
 Copy `.env.example` to `.env.local` locally, and configure the same variables in Vercel:
 
 ```bash
-NEXT_PUBLIC_SANITY_PROJECT_ID=<your-project-id>
+NEXT_PUBLIC_SANITY_PROJECT_ID=dwgqm2o3
 NEXT_PUBLIC_SANITY_DATASET=production
 NEXT_PUBLIC_SANITY_API_VERSION=2025-01-01
 ```
