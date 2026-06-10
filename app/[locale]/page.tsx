@@ -7,11 +7,15 @@ import { WhatWeBuild } from '@/components/WhatWeBuild';
 import { Apps } from '@/components/Apps';
 import { Process } from '@/components/Process';
 import { ForWho } from '@/components/ForWho';
-import { Training } from '@/components/Training';
+import { Training, type TrainingContent } from '@/components/Training';
 import { FinalCTA } from '@/components/FinalCTA';
 import { Footer } from '@/components/Footer';
+import { getCmsLandingPage } from '@/sanity/lib/landing';
 
-export default function HomePage() {
+export default async function HomePage({ params }: { params: { locale: string } }) {
+  const cmsPage = await getCmsLandingPage(params.locale);
+  const trainingContent = cmsPage?.training as TrainingContent | undefined;
+
   return (
     <>
       <Header />
@@ -24,7 +28,7 @@ export default function HomePage() {
         <Apps />
         <Process />
         <ForWho />
-        <Training />
+        <Training content={trainingContent} />
         <FinalCTA />
       </main>
       <Footer />
