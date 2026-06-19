@@ -257,6 +257,140 @@
       }
     }
   },
+  "aios": {
+    "meta": {
+      "title": "AI OS — Votre IA privée, clé en main · MyAppFactory",
+      "description": "Un système d'exploitation IA privé pour votre entreprise : un cockpit unique qui orchestre des agents intelligents dans le cloud, sur vos machines et dans vos applications sur-mesure. Privé, évolutif, réversible."
+    },
+    "nav": "AI OS",
+    "hero": {
+      "brand": "MyAppFactory",
+      "product": "AI OS",
+      "tagline": "votre IA privée",
+      "title": "Votre IA privée, clé en main.",
+      "definition": "AI OS, pour <g>AI Operating System</g> — comme Windows fait tourner votre ordinateur, l'AI OS fait tourner et coordonne toute l'IA de votre entreprise.",
+      "subtitle": "Pas un abonnement de plus. Pas un chatbot. Un véritable <k>système d'exploitation IA</k>, à vous — un cockpit unique qui orchestre des agents intelligents dans le cloud, sur vos machines et dans vos applications sur-mesure.",
+      "subtitle2": "Ni ChatGPT greffé sur votre quotidien. Ni dix automatisations qui cassent dès que vous regardez ailleurs. Une architecture pensée pour vous : privée, évolutive, réversible.",
+      "ctaPrimary": "Réserver un diagnostic",
+      "ctaSecondary": "Voir comment ça marche",
+      "live": "Déjà en production — sur notre propre entreprise."
+    },
+    "problem": {
+      "eyebrow": "Le constat",
+      "title": "L'IA en entreprise, aujourd'hui, c'est trois impasses.",
+      "cards": {
+        "silos": { "tag": "L'IA EN SILOS", "title": "Éparpillée", "body": "Un abonnement ChatGPT, un SaaS « IA » par-ci, un plugin par-là. Aucune mémoire commune, aucune cohérence, et vos données dispersées chez dix fournisseurs." },
+        "chatbot": { "tag": "LE CHATBOT GREFFÉ", "title": "Qui parle, mais n'agit pas", "body": "Impressionnant en démo, déconnecté de vos outils, de vos fichiers et de vos machines. Il répond à vos questions ; il ne fait pas le travail." },
+        "diy": { "tag": "LE BRICOLAGE", "title": "Qui s'effondre", "body": "Zapier, Make, scripts maison empilés. Ça tient tant que personne n'y touche. Puis ça casse — et plus personne ne sait réparer." }
+      }
+    },
+    "proposition": {
+      "eyebrow": "La proposition",
+      "title": "Un seul cockpit. Toute votre IA. Sous votre contrôle.",
+      "lead": "L'AI OS, c'est un point de commande unique — votre téléphone (Telegram, WhatsApp) ou un tableau de bord web sécurisé — qui pilote une équipe d'agents IA. Ils comprennent vos demandes en langage naturel et <k>agissent réellement</k> : sur vos serveurs, sur vos PC, dans vos applications et vos données métier.",
+      "pillars": {
+        "blocks": { "n": "// 01", "title": "Briques éprouvées", "body": "Des composants open-source robustes — agents, orchestration, réseau privé — assemblés et durcis. Pas un prototype jetable." },
+        "native": { "n": "// 02", "title": "AI-native, pas greffé", "body": "Pensé autour de l'IA dès la première ligne, intégré à vos outils. Pas un assistant collé après coup." },
+        "control": { "n": "// 03", "title": "Vous gardez la main", "body": "Hébergé chez vous, réversible, sans dépendance verrouillée. Code, données, accès : vous êtes propriétaire." }
+      }
+    },
+    "architecture": {
+      "eyebrow": "Ce qu'il y a dedans",
+      "title": "Six briques. Un système qui tient.",
+      "lead": "Chaque pièce a un rôle clair. Ensemble, elles forment une chaîne continue : de votre message jusqu'à l'action concrète, dans le cloud comme sur votre bureau.",
+      "diagram": {
+        "you": { "title": "VOUS", "sub": "Telegram · WhatsApp — en langage naturel" },
+        "cockpit": { "title": "COCKPIT IA — Hermes « Albert »", "sub": "comprend · décide · répond — votre point d'entrée unique", "tag": "chef d'orchestre" },
+        "connComplex": "pour une mission complexe ↓",
+        "paperclip": { "flag": "◇ OPTIONNEL · MONTÉE EN CHARGE", "title": "PAPERCLIP — l'orchestrateur", "sub": "compose & coordonne une équipe d'agents qui travaillent en parallèle" },
+        "toolsLabel": "Les outils — les « mains » de l'agent",
+        "tools": ["Terminal", "Navigateur web", "Base de données", "Fichiers", "E-mail", "API & web"],
+        "actsLabel": "Agit sur",
+        "dest": {
+          "cloud": { "title": "Cloud privé", "sub": "serveur sécurisé, toujours allumé" },
+          "machines": { "title": "Vos machines", "sub": "PC & portables · réseau privé chiffré" },
+          "apps": { "title": "Vos apps sur-mesure", "sub": "LeO · SaLLy · HaRold · … et les suivantes" }
+        }
+      },
+      "components": {
+        "cockpit": { "title": "Le cockpit", "body": "Un agent chef d'orchestre, joignable depuis Telegram, WhatsApp ou un tableau de bord web sécurisé. Il comprend vos demandes, décide de la marche à suivre et déclenche les bonnes actions. Votre interlocuteur unique, jour et nuit.", "chips": ["Telegram", "WhatsApp", "Dashboard web"] },
+        "workforce": { "title": "La main-d'œuvre IA", "body": "Pour les tâches lourdes ou parallèles, une « entreprise » d'agents spécialisés se répartit le travail et se coordonne — comme une équipe que l'on mobilise à la demande, puis que l'on met en pause. La puissance quand il faut, pas la facture en continu.", "chips": ["Orchestration multi-agents", "à la demande"] },
+        "cloud": { "title": "L'infrastructure cloud", "body": "Un serveur privé, toujours allumé, sécurisé en HTTPS, qui héberge vos agents, vos bases de données et vos services. La salle des machines — la vôtre, pas celle d'un éditeur qui peut changer ses règles du jour au lendemain.", "chips": ["VPS dédié", "HTTPS / certificat", "sauvegardes"] },
+        "network": { "title": "Le réseau privé", "body": "Un maillage chiffré relie le cloud à vos PC et portables. L'agent peut <k>agir sur vos machines</k> — par exemple ouvrir le bon rapport dans votre navigateur, à distance — sans jamais exposer quoi que ce soit à l'Internet public.", "chips": ["réseau maillé", "chiffré de bout en bout", "multi-postes"] },
+        "apps": { "title": "Vos applications connectées", "body": "Vos outils sur-mesure — CRM, agent commercial, base de candidats, tableaux de bord — branchés à l'IA, en lecture et en action. L'agent interroge vos données métier et les fait évoluer, en restant dans votre périmètre.", "chips": ["lecture sécurisée", "actions cadrées", "vos données"] },
+        "skills": { "title": "Vos compétences sur-mesure", "body": "Des capacités ajoutées à la carte : « ouvre tel rapport », « où en est tel client », « lance telle analyse ». On en ajoute au fil de l'eau, sans tout reconstruire. Votre AI OS apprend votre métier, pas l'inverse.", "chips": ["extensible", "sur-mesure", "sans refonte"] }
+      }
+    },
+    "proof": {
+      "eyebrow": "La preuve",
+      "title": "On ne vous vend pas un concept. On vous montre le nôtre.",
+      "lead": "Avant d'être une offre, l'AI OS est notre quotidien. MyAppFactory se pilote depuis un téléphone — voici des demandes réelles, et ce qui se passe ensuite.",
+      "scenarios": {
+        "open": { "q": "« Ouvre le rapport de reconnaissance ULB sur mon PC »", "a": "Le bon fichier s'ouvre dans Chrome, <g>sur le bon poste, à distance</g>, en deux secondes. Plusieurs versions ? L'agent demande laquelle." },
+        "leo": { "q": "« Des nouvelles de LeO aujourd'hui ? »", "a": "L'agent interroge notre agent commercial, <g>lit les réponses reçues</g> et vous en fait un résumé clair." },
+        "dashboard": { "q": "« Affiche le tableau de bord »", "a": "Accès <g>sécurisé en HTTPS</g>, où que vous soyez, sans port à retenir ni bidouille." }
+      },
+      "appsLabel": "Nos applications sur-mesure, en production",
+      "apps": {
+        "leo": { "name": "LeO", "tag": "agent commercial B2B" },
+        "harold": { "name": "Tell-E / HaRold", "tag": "analyse & recrutement" },
+        "sally": { "name": "SaLLy", "tag": "app métier" }
+      }
+    },
+    "guardrails": {
+      "eyebrow": "Nos garde-fous",
+      "title": "Pensé pour durer, pas pour vous enfermer.",
+      "lead": "Quatre principes non négociables — appris en le construisant pour de vrai, sur notre propre entreprise.",
+      "cards": {
+        "privacy": { "tag": "CONFIDENTIALITÉ", "title": "Privé par défaut", "body": "Vos données et vos agents tournent sur votre infrastructure. Rien ne transite par un réseau public sans raison, rien n'est revendu. Le réseau privé chiffré relie vos machines sans les exposer." },
+        "budget": { "tag": "BUDGET", "title": "Coûts maîtrisés", "body": "Le bon modèle IA pour chaque tâche — économique au quotidien, puissant quand c'est nécessaire — avec des garde-fous anti-dérapage. Pas de facture surprise en fin de mois." },
+        "scale": { "tag": "ÉVOLUTIVITÉ", "title": "On commence petit", "body": "Un premier usage qui marche, puis on ajoute des briques et des compétences au rythme de vos besoins. Pas de big-bang, pas de chantier de six mois avant le premier résultat." },
+        "ownership": { "tag": "OWNERSHIP", "title": "Réversible", "body": "Chaque étape est documentée et réversible. Vous gardez l'ownership complet — code, données, accès. Vous pouvez reprendre la main, ou la confier à qui vous voulez." }
+      }
+    },
+    "forWho": {
+      "eyebrow": "Pour qui",
+      "title": "Si vous vous reconnaissez ici, parlons.",
+      "personas": {
+        "pme": { "title": "PME en digitalisation", "body": "Vous voulez que l'IA prenne en charge du travail réel — pas juste répondre à des questions — sans monter une équipe technique." },
+        "leaders": { "title": "Dirigeants & solopreneurs", "body": "Vous êtes débordé, vous portez tout. Vous voulez déléguer à un assistant qui agit vraiment, depuis votre téléphone." },
+        "noDev": { "title": "Équipes sans développeur", "body": "Vous avez des outils et des données, mais personne pour les relier intelligemment. On construit le pont — et on vous le laisse." }
+      }
+    },
+    "process": {
+      "eyebrow": "Comment on procède",
+      "title": "Quatre étapes. Six semaines en moyenne.",
+      "steps": {
+        "discovery": { "n": "ÉTAPE 01", "title": "Découverte", "body": "Vos tâches, vos outils, vos irritants. On cartographie ce que l'IA peut réellement prendre en charge." },
+        "blueprint": { "n": "ÉTAPE 02", "title": "Blueprint", "body": "L'architecture de votre AI OS, validée avec vous avant d'écrire la moindre ligne. Pas de surprise." },
+        "install": { "n": "ÉTAPE 03", "title": "Installation & connexion", "body": "Cockpit, cloud privé, réseau sécurisé et vos applications — assemblés, durcis, testés." },
+        "delivery": { "n": "ÉTAPE 04", "title": "Livraison & ownership", "body": "Formation, accès, documentation. Vous prenez la main. C'est votre système." }
+      }
+    },
+    "finalCta": {
+      "eyebrow": "Diagnostic gratuit",
+      "title": "Et si vous pilotiez votre entreprise depuis une conversation ?",
+      "lead": "Un échange, sans engagement. On regarde ce que l'IA peut vraiment prendre en charge chez vous — et on vous dit franchement ce qui vaut le coup, et ce qui n'en vaut pas.",
+      "ctaPrimary": "Réserver un diagnostic",
+      "ctaSecondary": "Nous écrire",
+      "live": "Studio AI-native · Réponse sous 24 h"
+    }
+  },
+  "aiosTeaser": {
+    "eyebrow": "L'étage au-dessus",
+    "title": "Vos applications, orchestrées par ",
+    "titleAccent": "l'AI OS",
+    "definition": "AI OS, pour <g>AI Operating System</g> — comme Windows fait tourner votre ordinateur, l'AI OS fait tourner et coordonne toute l'IA de votre entreprise.",
+    "subtitle": "Les apps que vous venez de voir ne vivent pas en silo : un cockpit privé les relie et agit à travers elles — LeO, SaLLy, HaRold et les suivantes — depuis une seule conversation.",
+    "hub": "AI OS",
+    "hubTag": "cockpit",
+    "channelsLabel": "Vous écrivez",
+    "channels": ["Telegram", "Slack", "WhatsApp", "+ autres"],
+    "actsLabel": "Il agit sur",
+    "apps": ["LeO", "SaLLy", "HaRold", "+ vos outils"],
+    "ctaPrimary": "Découvrir l'AI OS",
+    "ctaSecondary": "Réserver un diagnostic"
+  },
   "footer": {
     "tagline": "Votre usine à applications sur-mesure.",
     "rights": "Tous droits réservés.",

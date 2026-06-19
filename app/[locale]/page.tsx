@@ -5,6 +5,7 @@ import { Manifesto } from '@/components/Manifesto';
 import { Approach } from '@/components/Approach';
 import { WhatWeBuild } from '@/components/WhatWeBuild';
 import { Apps } from '@/components/Apps';
+import { AiosTeaser } from '@/components/AiosTeaser';
 import { Process } from '@/components/Process';
 import { ForWho } from '@/components/ForWho';
 import { Training } from '@/components/Training';
@@ -22,6 +23,7 @@ export default function HomePage() {
         <Approach />
         <WhatWeBuild />
         <Apps />
+        <AiosTeaser />
         <Process />
         <ForWho />
         <Training />

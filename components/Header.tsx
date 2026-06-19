@@ -1,6 +1,7 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import { Menu, X } from 'lucide-react';
@@ -30,12 +31,20 @@ export function Header() {
     };
   }, [mobileOpen]);
 
+  const locale = useLocale();
+  const pathname = usePathname();
+  const home = `/${locale}`;
+  const onHome = pathname === home || pathname === `${home}/`;
+  // Sur la home : ancres simples (#x). Ailleurs (ex. /ai-os) : renvoie vers la home.
+  const anchor = (id: string) => (onHome ? `#${id}` : `${home}#${id}`);
+
   const navItems = [
-    { href: '#approach', label: t('nav.approach') },
-    { href: '#work', label: t('nav.build') },
-    { href: '#process', label: t('nav.process') },
-    { href: '#training', label: t('nav.training') },
-    { href: '#contact', label: t('nav.contact') },
+    { href: anchor('approach'), label: t('nav.approach') },
+    { href: anchor('work'), label: t('nav.build') },
+    { href: anchor('process'), label: t('nav.process') },
+    { href: anchor('training'), label: t('nav.training') },
+    { href: `${home}/ai-os`, label: 'AI OS' },
+    { href: anchor('contact'), label: t('nav.contact') },
   ];
 
   return (
@@ -69,7 +78,7 @@ export function Header() {
 
             {/* Desktop CTA */}
             <div className="hidden md:block">
-              <Button href="#contact" size="md" arrow>
+              <Button href={anchor('contact')} size="md" arrow>
                 {t('cta')}
               </Button>
             </div>
@@ -124,7 +133,7 @@ export function Header() {
                 className="mt-8"
               >
                 <a
-                  href="#contact"
+                  href={anchor('contact')}
                   onClick={() => setMobileOpen(false)}
                   className="flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-4 text-base font-medium text-bg"
                 >

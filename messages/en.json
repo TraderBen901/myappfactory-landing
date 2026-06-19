@@ -257,6 +257,140 @@
       }
     }
   },
+  "aios": {
+    "meta": {
+      "title": "AI OS — Your private AI, turnkey · MyAppFactory",
+      "description": "A private AI operating system for your business: a single cockpit that orchestrates intelligent agents in the cloud, on your machines and inside your custom applications. Private, scalable, reversible."
+    },
+    "nav": "AI OS",
+    "hero": {
+      "brand": "MyAppFactory",
+      "product": "AI OS",
+      "tagline": "your private AI",
+      "title": "Your private AI, turnkey.",
+      "definition": "AI OS, short for <g>AI Operating System</g> — just as Windows runs your computer, the AI OS runs and coordinates all of your company's AI.",
+      "subtitle": "Not one more subscription. Not a chatbot. A real <k>AI operating system</k>, yours — a single cockpit that orchestrates intelligent agents in the cloud, on your machines and inside your custom applications.",
+      "subtitle2": "Not ChatGPT bolted onto your day. Not ten automations that break the moment you look away. An architecture built for you: private, scalable, reversible.",
+      "ctaPrimary": "Book a diagnostic",
+      "ctaSecondary": "See how it works",
+      "live": "Already in production — on our own company."
+    },
+    "problem": {
+      "eyebrow": "The reality",
+      "title": "AI in business today means three dead ends.",
+      "cards": {
+        "silos": { "tag": "AI IN SILOS", "title": "Scattered", "body": "A ChatGPT subscription, an \"AI\" SaaS here, a plugin there. No shared memory, no consistency, and your data spread across ten vendors." },
+        "chatbot": { "tag": "THE BOLTED-ON CHATBOT", "title": "Talks, but doesn't act", "body": "Impressive in a demo, disconnected from your tools, your files and your machines. It answers questions; it doesn't do the work." },
+        "diy": { "tag": "THE DUCT-TAPE STACK", "title": "That collapses", "body": "Zapier, Make, homemade scripts piled up. It holds as long as nobody touches it. Then it breaks — and no one knows how to fix it." }
+      }
+    },
+    "proposition": {
+      "eyebrow": "The proposition",
+      "title": "One cockpit. All your AI. Under your control.",
+      "lead": "The AI OS is a single command point — your phone (Telegram, WhatsApp) or a secure web dashboard — that drives a team of AI agents. They understand your requests in plain language and <k>actually act</k>: on your servers, on your PCs, inside your applications and your business data.",
+      "pillars": {
+        "blocks": { "n": "// 01", "title": "Battle-tested blocks", "body": "Robust open-source components — agents, orchestration, private network — assembled and hardened. Not a throwaway prototype." },
+        "native": { "n": "// 02", "title": "AI-native, not bolted on", "body": "Designed around AI from the first line, integrated with your tools. Not an assistant glued on afterwards." },
+        "control": { "n": "// 03", "title": "You stay in control", "body": "Hosted on your side, reversible, with no locked-in dependency. Code, data, access: you own it." }
+      }
+    },
+    "architecture": {
+      "eyebrow": "What's inside",
+      "title": "Six blocks. A system that holds.",
+      "lead": "Each piece has a clear role. Together they form a continuous chain: from your message to the concrete action, in the cloud as on your desktop.",
+      "diagram": {
+        "you": { "title": "YOU", "sub": "Telegram · WhatsApp — in plain language" },
+        "cockpit": { "title": "AI COCKPIT — Hermes \"Albert\"", "sub": "understands · decides · replies — your single entry point", "tag": "conductor" },
+        "connComplex": "for a complex mission ↓",
+        "paperclip": { "flag": "◇ OPTIONAL · SCALING UP", "title": "PAPERCLIP — the orchestrator", "sub": "composes & coordinates a team of agents working in parallel" },
+        "toolsLabel": "The tools — the agent's \"hands\"",
+        "tools": ["Terminal", "Web browser", "Database", "Files", "E-mail", "API & web"],
+        "actsLabel": "Acts on",
+        "dest": {
+          "cloud": { "title": "Private cloud", "sub": "secure server, always on" },
+          "machines": { "title": "Your machines", "sub": "PCs & laptops · encrypted private network" },
+          "apps": { "title": "Your custom apps", "sub": "LeO · SaLLy · HaRold · … and the next ones" }
+        }
+      },
+      "components": {
+        "cockpit": { "title": "The cockpit", "body": "A conductor agent, reachable from Telegram, WhatsApp or a secure web dashboard. It understands your requests, decides what to do and triggers the right actions. Your single point of contact, day and night.", "chips": ["Telegram", "WhatsApp", "Web dashboard"] },
+        "workforce": { "title": "The AI workforce", "body": "For heavy or parallel tasks, a \"company\" of specialized agents splits the work and coordinates — like a team you mobilize on demand, then pause. Power when you need it, not a bill running non-stop.", "chips": ["Multi-agent orchestration", "on demand"] },
+        "cloud": { "title": "The cloud infrastructure", "body": "A private server, always on, secured over HTTPS, hosting your agents, your databases and your services. The engine room — yours, not that of a vendor who can change the rules overnight.", "chips": ["Dedicated VPS", "HTTPS / certificate", "backups"] },
+        "network": { "title": "The private network", "body": "An encrypted mesh links the cloud to your PCs and laptops. The agent can <k>act on your machines</k> — for example open the right report in your browser, remotely — without ever exposing anything to the public Internet.", "chips": ["mesh network", "end-to-end encrypted", "multi-device"] },
+        "apps": { "title": "Your connected applications", "body": "Your custom tools — CRM, sales agent, candidate database, dashboards — plugged into the AI, for reading and acting. The agent queries your business data and evolves it, staying within your perimeter.", "chips": ["secure reads", "scoped actions", "your data"] },
+        "skills": { "title": "Your custom skills", "body": "Capabilities added à la carte: \"open that report\", \"where is that client\", \"run that analysis\". We add them as we go, without rebuilding everything. Your AI OS learns your business, not the other way around.", "chips": ["extensible", "custom", "no rebuild"] }
+      }
+    },
+    "proof": {
+      "eyebrow": "The proof",
+      "title": "We don't sell you a concept. We show you ours.",
+      "lead": "Before being an offer, the AI OS is our daily life. MyAppFactory is run from a phone — here are real requests, and what happens next.",
+      "scenarios": {
+        "open": { "q": "\"Open the ULB recon report on my PC\"", "a": "The right file opens in Chrome, <g>on the right machine, remotely</g>, in two seconds. Several versions? The agent asks which one." },
+        "leo": { "q": "\"Any news from LeO today?\"", "a": "The agent queries our sales agent, <g>reads the replies received</g> and gives you a clear summary." },
+        "dashboard": { "q": "\"Show the dashboard\"", "a": "Access <g>secured over HTTPS</g>, wherever you are, with no port to remember or workaround." }
+      },
+      "appsLabel": "Our custom applications, in production",
+      "apps": {
+        "leo": { "name": "LeO", "tag": "B2B sales agent" },
+        "harold": { "name": "Tell-E / HaRold", "tag": "analysis & recruitment" },
+        "sally": { "name": "SaLLy", "tag": "business app" }
+      }
+    },
+    "guardrails": {
+      "eyebrow": "Our guardrails",
+      "title": "Built to last, not to lock you in.",
+      "lead": "Four non-negotiable principles — learned by building it for real, on our own company.",
+      "cards": {
+        "privacy": { "tag": "PRIVACY", "title": "Private by default", "body": "Your data and your agents run on your infrastructure. Nothing travels over a public network without reason, nothing is resold. The encrypted private network links your machines without exposing them." },
+        "budget": { "tag": "BUDGET", "title": "Controlled costs", "body": "The right AI model for each task — economical day-to-day, powerful when needed — with anti-overrun guardrails. No surprise bill at month's end." },
+        "scale": { "tag": "SCALABILITY", "title": "We start small", "body": "A first use case that works, then we add blocks and skills at the pace of your needs. No big bang, no six-month project before the first result." },
+        "ownership": { "tag": "OWNERSHIP", "title": "Reversible", "body": "Every step is documented and reversible. You keep full ownership — code, data, access. You can take back control, or hand it to whoever you want." }
+      }
+    },
+    "forWho": {
+      "eyebrow": "Who it's for",
+      "title": "If you recognize yourself here, let's talk.",
+      "personas": {
+        "pme": { "title": "SMBs going digital", "body": "You want AI to take on real work — not just answer questions — without building a technical team." },
+        "leaders": { "title": "Founders & solopreneurs", "body": "You're overloaded, you carry everything. You want to delegate to an assistant that truly acts, from your phone." },
+        "noDev": { "title": "Teams without a developer", "body": "You have tools and data, but no one to connect them intelligently. We build the bridge — and leave it with you." }
+      }
+    },
+    "process": {
+      "eyebrow": "How we work",
+      "title": "Four steps. Six weeks on average.",
+      "steps": {
+        "discovery": { "n": "STEP 01", "title": "Discovery", "body": "Your tasks, your tools, your pain points. We map what AI can really take on." },
+        "blueprint": { "n": "STEP 02", "title": "Blueprint", "body": "The architecture of your AI OS, validated with you before writing a single line. No surprises." },
+        "install": { "n": "STEP 03", "title": "Setup & connection", "body": "Cockpit, private cloud, secure network and your applications — assembled, hardened, tested." },
+        "delivery": { "n": "STEP 04", "title": "Delivery & ownership", "body": "Training, access, documentation. You take control. It's your system." }
+      }
+    },
+    "finalCta": {
+      "eyebrow": "Free diagnostic",
+      "title": "What if you ran your company from a conversation?",
+      "lead": "One conversation, no commitment. We look at what AI can truly take on at your company — and we tell you honestly what's worth it, and what isn't.",
+      "ctaPrimary": "Book a diagnostic",
+      "ctaSecondary": "Email us",
+      "live": "AI-native studio · Reply within 24h"
+    }
+  },
+  "aiosTeaser": {
+    "eyebrow": "One layer up",
+    "title": "Your applications, orchestrated by ",
+    "titleAccent": "the AI OS",
+    "definition": "AI OS, short for <g>AI Operating System</g> — just as Windows runs your computer, the AI OS runs and coordinates all of your company's AI.",
+    "subtitle": "The apps you just saw don't live in silos: a private cockpit connects them and acts through them — LeO, SaLLy, HaRold and the next ones — from a single conversation.",
+    "hub": "AI OS",
+    "hubTag": "cockpit",
+    "channelsLabel": "You message",
+    "channels": ["Telegram", "Slack", "WhatsApp", "+ more"],
+    "actsLabel": "It acts on",
+    "apps": ["LeO", "SaLLy", "HaRold", "+ your tools"],
+    "ctaPrimary": "Discover the AI OS",
+    "ctaSecondary": "Book a diagnostic"
+  },
   "footer": {
     "tagline": "Your custom app factory.",
     "rights": "All rights reserved.",
