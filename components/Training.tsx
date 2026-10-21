@@ -6,16 +6,68 @@ import { Brain, Workflow, Rocket, CheckCircle2 } from 'lucide-react';
 import { SectionLabel } from './ui/SectionLabel';
 import { Button } from './ui/Button';
 
-const levels = [
+export type TrainingContent = {
+  eyebrow?: string;
+  title?: string;
+  subtitle?: string;
+  academyLabel?: string;
+  academyTitle?: string;
+  academyBody?: string;
+  forWhomLabel?: string;
+  resultLabel?: string;
+  levels?: Array<{
+    label?: string;
+    title?: string;
+    duration?: string;
+    body?: string;
+    audience?: string;
+    result?: string;
+  }>;
+  outcomesTitle?: string;
+  outcomes?: string[];
+  cta?: {
+    label?: string;
+    href?: string;
+  };
+};
+
+const fallbackLevels = [
   { key: 'level1', Icon: Brain },
   { key: 'level2', Icon: Workflow },
   { key: 'level3', Icon: Rocket },
 ] as const;
 
-const outcomes = ['outcome1', 'outcome2', 'outcome3'] as const;
+const fallbackOutcomes = ['outcome1', 'outcome2', 'outcome3'] as const;
 
-export function Training() {
+const icons = [Brain, Workflow, Rocket] as const;
+
+export function Training({ content }: { content?: TrainingContent | null }) {
   const t = useTranslations('training');
+
+  const levels = content?.levels?.length
+    ? content.levels.slice(0, 3).map((level, index) => ({
+        key: level.label || level.title || String(index),
+        Icon: icons[index] ?? Brain,
+        label: level.label || t(`levels.${fallbackLevels[index]?.key ?? 'level1'}.label`),
+        title: level.title || t(`levels.${fallbackLevels[index]?.key ?? 'level1'}.title`),
+        duration: level.duration || t(`levels.${fallbackLevels[index]?.key ?? 'level1'}.duration`),
+        body: level.body || t(`levels.${fallbackLevels[index]?.key ?? 'level1'}.body`),
+        audience: level.audience || t(`levels.${fallbackLevels[index]?.key ?? 'level1'}.audience`),
+        result: level.result || t(`levels.${fallbackLevels[index]?.key ?? 'level1'}.result`),
+      }))
+    : fallbackLevels.map(({ key, Icon }) => ({
+        key,
+        Icon,
+        label: t(`levels.${key}.label`),
+        title: t(`levels.${key}.title`),
+        duration: t(`levels.${key}.duration`),
+        body: t(`levels.${key}.body`),
+        audience: t(`levels.${key}.audience`),
+        result: t(`levels.${key}.result`),
+      }));
+
+  const outcomes = content?.outcomes?.length ? content.outcomes : fallbackOutcomes.map((key) => t(`outcomes.${key}`));
+  const ctaHref = content?.cta?.href || '#contact';
 
   return (
     <section id="training" className="relative overflow-hidden border-t border-border py-24 md:py-32">
@@ -25,20 +77,20 @@ export function Training() {
       <div className="container-x relative">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div className="max-w-3xl">
-            <SectionLabel>{t('eyebrow')}</SectionLabel>
-            <h2 className="mt-6 text-h1 font-semibold text-balance">{t('title')}</h2>
-            <p className="mt-5 text-lg text-text-muted text-balance">{t('subtitle')}</p>
+            <SectionLabel>{content?.eyebrow || t('eyebrow')}</SectionLabel>
+            <h2 className="mt-6 text-h1 font-semibold text-balance">{content?.title || t('title')}</h2>
+            <p className="mt-5 text-lg text-text-muted text-balance">{content?.subtitle || t('subtitle')}</p>
           </div>
 
           <div className="rounded-2xl border border-border bg-surface p-6 md:p-8">
-            <p className="font-mono text-xs uppercase tracking-widest text-accent">{t('academyLabel')}</p>
-            <p className="mt-4 text-2xl font-semibold tracking-tight text-balance">{t('academyTitle')}</p>
-            <p className="mt-3 text-sm leading-6 text-text-muted">{t('academyBody')}</p>
+            <p className="font-mono text-xs uppercase tracking-widest text-accent">{content?.academyLabel || t('academyLabel')}</p>
+            <p className="mt-4 text-2xl font-semibold tracking-tight text-balance">{content?.academyTitle || t('academyTitle')}</p>
+            <p className="mt-3 text-sm leading-6 text-text-muted">{content?.academyBody || t('academyBody')}</p>
           </div>
         </div>
 
         <div className="mt-16 grid gap-5 lg:grid-cols-3">
-          {levels.map(({ key, Icon }, i) => (
+          {levels.map(({ key, Icon, label, title, duration, body, audience, result }, i) => (
             <motion.article
               key={key}
               initial={{ opacity: 0, y: 22 }}
@@ -52,23 +104,23 @@ export function Training() {
                   <Icon className="h-5 w-5" />
                 </div>
                 <span className="rounded-full border border-border bg-bg px-3 py-1 font-mono text-[10px] uppercase tracking-widest text-text-muted">
-                  {t(`levels.${key}.duration`)}
+                  {duration}
                 </span>
               </div>
 
               <p className="mt-8 font-mono text-xs uppercase tracking-widest text-accent">
-                {t(`levels.${key}.label`)}
+                {label}
               </p>
-              <h3 className="mt-3 text-2xl font-semibold tracking-tight">{t(`levels.${key}.title`)}</h3>
-              <p className="mt-4 text-sm leading-6 text-text-muted">{t(`levels.${key}.body`)}</p>
+              <h3 className="mt-3 text-2xl font-semibold tracking-tight">{title}</h3>
+              <p className="mt-4 text-sm leading-6 text-text-muted">{body}</p>
 
               <div className="mt-8 space-y-4">
-                <TrainingDetail label={t('forWhom')} value={t(`levels.${key}.audience`)} />
-                <TrainingDetail label={t('result')} value={t(`levels.${key}.result`)} />
+                <TrainingDetail label={content?.forWhomLabel || t('forWhom')} value={audience} />
+                <TrainingDetail label={content?.resultLabel || t('result')} value={result} />
               </div>
 
               <div className="mt-auto pt-8 font-mono text-[10px] uppercase tracking-widest text-text-muted/60">
-                {String(i + 1).padStart(2, '0')} / 03
+                {String(i + 1).padStart(2, '0')} / {String(levels.length).padStart(2, '0')}
               </div>
             </motion.article>
           ))}
@@ -76,18 +128,18 @@ export function Training() {
 
         <div className="mt-8 grid gap-5 rounded-2xl border border-border bg-bg p-6 md:grid-cols-[1fr_auto] md:items-center md:p-8">
           <div>
-            <p className="text-xl font-semibold tracking-tight">{t('outcomesTitle')}</p>
+            <p className="text-xl font-semibold tracking-tight">{content?.outcomesTitle || t('outcomesTitle')}</p>
             <div className="mt-5 grid gap-3 md:grid-cols-3">
-              {outcomes.map((key) => (
-                <div key={key} className="flex gap-3 text-sm text-text-muted">
+              {outcomes.map((outcome) => (
+                <div key={outcome} className="flex gap-3 text-sm text-text-muted">
                   <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                  <span>{t(`outcomes.${key}`)}</span>
+                  <span>{outcome}</span>
                 </div>
               ))}
             </div>
           </div>
-          <Button href="#contact" size="lg" arrow>
-            {t('cta')}
+          <Button href={ctaHref} size="lg" arrow>
+            {content?.cta?.label || t('cta')}
           </Button>
         </div>
       </div>
