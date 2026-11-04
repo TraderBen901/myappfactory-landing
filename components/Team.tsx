@@ -2,15 +2,16 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import clsx from 'clsx';
 import { Linkedin, MapPin } from 'lucide-react';
 import { SectionLabel } from './ui/SectionLabel';
 
-// Les trois cofondateurs, dans l'ordre donné par Benoît. Noms et liens : profils LinkedIn publics.
+// Les trois cofondateurs, dans l'ordre donné par Benoît. Noms, liens et photos : profils LinkedIn publics (photos du 04/11/2026).
 const MEMBERS = [
-  { key: 'dominique', name: 'Dominique Daue', initials: 'DD', linkedin: 'https://www.linkedin.com/in/dominique-daue-8399528/' },
-  { key: 'arnaud', name: 'Arnaud Boland', initials: 'AB', linkedin: 'https://www.linkedin.com/in/arnaudboland/' },
-  { key: 'benoit', name: 'Benoît Schiepers', initials: 'BS', linkedin: 'https://www.linkedin.com/in/benoit-schiepers/' },
+  { key: 'dominique', name: 'Dominique Daue', photo: '/team/dominique-daue.jpg', linkedin: 'https://www.linkedin.com/in/dominique-daue-8399528/' },
+  { key: 'arnaud', name: 'Arnaud Boland', photo: '/team/arnaud-boland.jpg', linkedin: 'https://www.linkedin.com/in/arnaudboland/' },
+  { key: 'benoit', name: 'Benoît Schiepers', photo: '/team/benoit-schiepers.jpg', linkedin: 'https://www.linkedin.com/in/benoit-schiepers/' },
 ] as const;
 
 export function Team() {
@@ -34,7 +35,7 @@ export function Team() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative flex flex-col items-center rounded-2xl border border-border bg-bg px-6 pb-8 pt-14 text-center"
+                className="relative flex flex-col items-center rounded-2xl border border-border bg-bg px-6 pb-8 pt-16 text-center"
               >
                 {/*
                   Le trait vert qui relie les trois associés (à partir de la tablette), du centre de la 1re carte
@@ -50,12 +51,9 @@ export function Team() {
                   )}
                 />
 
-                {/* Initiales, posées sur le bord haut de la carte */}
-                <div
-                  aria-hidden
-                  className="absolute left-1/2 top-0 z-20 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-accent bg-bg font-mono text-base font-semibold tracking-wider text-accent"
-                >
-                  {m.initials}
+                {/* Photo, posée sur le bord haut de la carte (décorative : le nom est écrit juste en dessous) */}
+                <div className="absolute left-1/2 top-0 z-20 h-20 w-20 -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full border-2 border-accent bg-bg">
+                  <Image src={m.photo} alt="" width={80} height={80} className="h-full w-full object-cover" />
                 </div>
 
                 <p className="font-mono text-xs uppercase tracking-widest text-accent">{t('role')}</p>
