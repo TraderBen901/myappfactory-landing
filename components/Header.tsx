@@ -44,6 +44,7 @@ export function Header() {
     { href: anchor('process'), label: t('nav.process') },
     { href: anchor('training'), label: t('nav.training') },
     { href: `${home}/ai-os`, label: 'AI OS' },
+    { href: anchor('team'), label: t('nav.team') },
     { href: anchor('contact'), label: t('nav.contact') },
   ];
 
@@ -60,12 +61,12 @@ export function Header() {
         <div className="container-x flex h-16 items-center justify-between">
           <Logo />
 
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-8 xl:flex">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="text-sm text-text-muted transition hover:text-text"
+                className="whitespace-nowrap text-sm text-text-muted transition hover:text-text"
               >
                 {item.label}
               </a>
@@ -88,7 +89,7 @@ export function Header() {
               type="button"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               onClick={() => setMobileOpen((v) => !v)}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-text transition hover:border-accent hover:text-accent md:hidden"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-text transition hover:border-accent hover:text-accent xl:hidden"
             >
               {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
@@ -104,7 +105,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-16 z-40 bg-bg md:hidden"
+            className="fixed inset-0 top-16 z-40 bg-bg xl:hidden"
           >
             <motion.nav
               initial={{ y: -10, opacity: 0 }}

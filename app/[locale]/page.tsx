@@ -9,6 +9,7 @@ import { AiosTeaser } from '@/components/AiosTeaser';
 import { Process } from '@/components/Process';
 import { ForWho } from '@/components/ForWho';
 import { Training } from '@/components/Training';
+import { Team } from '@/components/Team';
 import { FinalCTA } from '@/components/FinalCTA';
 import { Footer } from '@/components/Footer';
 
@@ -27,6 +28,7 @@ export default function HomePage() {
         <Process />
         <ForWho />
         <Training />
+        <Team />
         <FinalCTA />
       </main>
       <Footer />

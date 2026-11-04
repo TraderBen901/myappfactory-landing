@@ -9,6 +9,7 @@
       "build": "Réalisations",
       "process": "Processus",
       "training": "Formations",
+      "team": "Équipe",
       "contact": "Contact"
     },
     "cta": "Réserver un appel"
@@ -199,6 +200,28 @@
         "body": "Concevoir des systèmes IA intégrés : agents spécialisés, RAG sur vos données, intégrations API, évaluation, sécurité, déploiement et monitoring.",
         "audience": "Profils avancés, consultants IA, product managers, CTO, équipes tech/no-code.",
         "result": "Architecture cible ou prototype prêt à industrialiser."
+      }
+    }
+  },
+  "team": {
+    "eyebrow": "L'équipe",
+    "title": "Trois cofondateurs, trois métiers.",
+    "subtitle": "MyAppFactory réunit trois associés belges, entre Charleroi, Bruxelles et Liège.",
+    "role": "Cofondateur",
+    "linkLabel": "Profil LinkedIn",
+    "linkAria": "Profil LinkedIn de {name} (nouvel onglet)",
+    "members": {
+      "dominique": {
+        "focus": "Direction et stratégie",
+        "city": "Charleroi"
+      },
+      "arnaud": {
+        "focus": "Ventes et partenariats",
+        "city": "Bruxelles"
+      },
+      "benoit": {
+        "focus": "Architecture IA et automatisation",
+        "city": "Liège"
       }
     }
   },

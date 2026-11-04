@@ -9,6 +9,7 @@
       "build": "Work",
       "process": "Process",
       "training": "Training",
+      "team": "Team",
       "contact": "Contact"
     },
     "cta": "Book a call"
@@ -199,6 +200,28 @@
         "body": "Design integrated AI systems: specialized agents, RAG on your data, API integrations, evaluation, security, deployment and monitoring.",
         "audience": "Advanced profiles, AI consultants, product managers, CTOs, tech/no-code teams.",
         "result": "A target architecture or prototype ready to industrialize."
+      }
+    }
+  },
+  "team": {
+    "eyebrow": "The team",
+    "title": "Three co-founders, three skill sets.",
+    "subtitle": "MyAppFactory brings together three Belgian partners, based in Charleroi, Brussels and Liège.",
+    "role": "Co-founder",
+    "linkLabel": "LinkedIn profile",
+    "linkAria": "{name}'s LinkedIn profile (opens in a new tab)",
+    "members": {
+      "dominique": {
+        "focus": "Leadership and strategy",
+        "city": "Charleroi"
+      },
+      "arnaud": {
+        "focus": "Sales and partnerships",
+        "city": "Brussels"
+      },
+      "benoit": {
+        "focus": "AI architecture and automation",
+        "city": "Liège"
       }
     }
   },
