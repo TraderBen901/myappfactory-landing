@@ -420,7 +420,9 @@
     "links": {
       "legal": "Legal",
       "privacy": "Privacy",
-      "contact": "Contact"
+      "contact": "Contact",
+      "linkedin": "LinkedIn",
+      "linkedinAria": "MyAppFactory on LinkedIn (opens in a new tab)"
     }
   }
 }

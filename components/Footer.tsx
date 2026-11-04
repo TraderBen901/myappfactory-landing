@@ -1,7 +1,11 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Linkedin } from 'lucide-react';
 import { Logo } from './Logo';
+
+// Page LinkedIn de la société, créée le 04/11/2026
+const LINKEDIN_URL = 'https://www.linkedin.com/company/myappfactory/';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -25,6 +29,16 @@ export function Footer() {
             </a>
             <a href="#contact" className="text-text-muted transition hover:text-text">
               {t('links.contact')}
+            </a>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t('links.linkedinAria')}
+              className="inline-flex items-center gap-1.5 text-text-muted transition hover:text-accent"
+            >
+              <Linkedin className="h-4 w-4 shrink-0" aria-hidden />
+              {t('links.linkedin')}
             </a>
           </div>
         </div>
