@@ -18,7 +18,7 @@ export function Team() {
   const t = useTranslations('team');
 
   return (
-    <section id="team" className="relative border-t border-border bg-surface py-24 md:py-32">
+    <section id="team" className="relative border-t border-border bg-surface py-20 md:py-24">
       <div className="container-x">
         <div className="max-w-3xl">
           <SectionLabel>{t('eyebrow')}</SectionLabel>

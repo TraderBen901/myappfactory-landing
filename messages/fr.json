@@ -121,6 +121,30 @@
     "eyebrow": "Nos réalisations",
     "title": "Déjà en production.",
     "subtitle": "Trois apps construites avec la Factory. Trois métiers différents. Une seule méthode.",
+    "demo": {
+      "harold": {
+        "role": "Directrice marketing",
+        "report": "Rapport d'adéquation",
+        "grade": "Excellent",
+        "action": "Générer le rapport",
+        "s1": "Entretien",
+        "s2": "Nouveau",
+        "s3": "Offre"
+      },
+      "sally": {
+        "ask": "Je cherche un cadeau original pour ma femme.",
+        "reply": "Voici trois idées pour elle :",
+        "suggestions": "Suggestions"
+      },
+      "leo": {
+        "k1": "RDV ce mois",
+        "k2": "Leads actifs",
+        "k3": "Taux de réponse",
+        "st1": "RDV réservé",
+        "st2": "Contacté",
+        "st3": "Enrichi"
+      }
+    },
     "items": {
       "harold": {
         "name": "Tell-E/HaRold",
@@ -146,6 +170,7 @@
     "eyebrow": "Comment ça marche",
     "title": "Quatre étapes. Six semaines en moyenne.",
     "subtitle": "Un processus itératif, transparent, sans mauvaises surprises.",
+    "weekShort": "S",
     "steps": {
       "discovery": {
         "number": "01",

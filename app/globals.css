@@ -11,6 +11,16 @@
   --accent: #00A87E;
   --accent-2: #E53E3E;
   --border: #E5DFD6;
+
+  /* Les mêmes couleurs en composantes, pour que les transparences Tailwind (bg-accent/10…) fonctionnent */
+  --bg-rgb: 249 245 239;
+  --surface-rgb: 255 255 255;
+  --surface-2-rgb: 242 238 231;
+  --text-rgb: 10 10 10;
+  --text-muted-rgb: 85 85 80;
+  --accent-rgb: 0 168 126;
+  --accent-2-rgb: 229 62 62;
+  --border-rgb: 229 223 214;
 }
 
 .dark {
@@ -22,6 +32,15 @@
   --accent: #00C896;
   --accent-2: #FF3B3B;
   --border: #1F1F1F;
+
+  --bg-rgb: 10 10 10;
+  --surface-rgb: 17 17 17;
+  --surface-2-rgb: 26 26 26;
+  --text-rgb: 255 255 255;
+  --text-muted-rgb: 136 136 136;
+  --accent-rgb: 0 200 150;
+  --accent-2-rgb: 255 59 59;
+  --border-rgb: 31 31 31;
 }
 
 * {

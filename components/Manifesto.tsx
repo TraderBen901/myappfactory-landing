@@ -7,9 +7,9 @@ export function Manifesto() {
   const t = useTranslations('manifesto');
 
   return (
-    <section className="relative overflow-hidden py-20 md:py-32">
+    <section className="relative overflow-hidden py-16 md:py-24">
       {/* Soft accent glow */}
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[280px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/8 blur-[120px]" />
+      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[280px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/10 blur-[120px]" />
 
       <div className="container-x relative text-center">
         <motion.p

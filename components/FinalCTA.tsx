@@ -102,7 +102,7 @@ export function FinalCTA() {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden border-t border-border py-24 md:py-32"
+      className="relative overflow-hidden border-t border-border py-20 md:py-24"
     >
       {/* Glow */}
       <div className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-accent/10 blur-[140px]" />

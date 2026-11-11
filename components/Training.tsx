@@ -18,7 +18,7 @@ export function Training() {
   const t = useTranslations('training');
 
   return (
-    <section id="training" className="relative overflow-hidden border-t border-border py-24 md:py-32">
+    <section id="training" className="relative overflow-hidden border-t border-border py-20 md:py-24">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/50 to-transparent" />
       <div className="absolute -right-40 top-24 h-80 w-80 rounded-full bg-accent/10 blur-3xl" />
 
@@ -45,7 +45,7 @@ export function Training() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.45, delay: i * 0.08 }}
-              className="group relative flex min-h-[430px] flex-col overflow-hidden rounded-2xl border border-border bg-surface p-7 transition hover:-translate-y-1 hover:border-accent/50 hover:bg-surface-2"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-surface p-7 transition hover:-translate-y-1 hover:border-accent/50 hover:bg-surface-2"
             >
               <div className="flex items-start justify-between gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-border bg-bg text-accent transition group-hover:border-accent">

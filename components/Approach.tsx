@@ -26,7 +26,7 @@ export function Approach() {
   ] as const;
 
   return (
-    <section id="approach" className="relative border-t border-border bg-surface py-24 md:py-32">
+    <section id="approach" className="relative border-t border-border bg-surface py-20 md:py-24">
       <div className="container-x">
         <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
           {/* Left: copy */}

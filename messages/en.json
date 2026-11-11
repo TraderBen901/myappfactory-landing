@@ -121,6 +121,30 @@
     "eyebrow": "Our work",
     "title": "Already in production.",
     "subtitle": "Three apps built with the Factory. Three different industries. One method.",
+    "demo": {
+      "harold": {
+        "role": "Marketing director",
+        "report": "Fit report",
+        "grade": "Excellent",
+        "action": "Generate report",
+        "s1": "Interview",
+        "s2": "New",
+        "s3": "Offer"
+      },
+      "sally": {
+        "ask": "I'm looking for an original gift for my wife.",
+        "reply": "Here are three ideas for her:",
+        "suggestions": "Suggestions"
+      },
+      "leo": {
+        "k1": "Meetings this month",
+        "k2": "Active leads",
+        "k3": "Reply rate",
+        "st1": "Meeting booked",
+        "st2": "Contacted",
+        "st3": "Enriched"
+      }
+    },
     "items": {
       "harold": {
         "name": "Tell-E/HaRold",
@@ -146,6 +170,7 @@
     "eyebrow": "How it works",
     "title": "Four steps. Six weeks on average.",
     "subtitle": "An iterative, transparent process. No nasty surprises.",
+    "weekShort": "W",
     "steps": {
       "discovery": {
         "number": "01",
