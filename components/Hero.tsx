@@ -1,21 +1,28 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from './ui/Button';
 import { SectionLabel } from './ui/SectionLabel';
+import { HeroScene, type HeroSceneLabels } from './HeroScene';
 
 export function Hero() {
   const t = useTranslations('hero');
-  const videoRef = useRef<HTMLVideoElement>(null);
 
-  // TODO: remplacer par '/animations/Video_Factory_dark.mp4' quand disponible
-  const videoSrc = '/animations/Video_Factory_light.mp4';
-
-  useEffect(() => {
-    videoRef.current?.load();
-  }, [videoSrc]);
+  // Textes de l'animation (briques, fenêtre, marquages au sol)
+  const scene: HeroSceneLabels = {
+    alt: t('scene.alt'),
+    appTitle: t('scene.appTitle'),
+    building: t('scene.building'),
+    live: t('scene.live'),
+    bricks: [t('scene.brick1'), t('scene.brick2'), t('scene.brick3'), t('scene.brick4'), t('scene.brick5')],
+    custom: t('scene.custom'),
+    measure: t('scene.measure'),
+    stock: t('scene.stock'),
+    floorStock: t('scene.floorStock'),
+    floorBuild: t('scene.floorBuild'),
+    floorLive: t('scene.floorLive'),
+  };
 
   // Texte hero — réutilisé en mobile (flow) et desktop (overlay)
   const HeroContent = () => (
@@ -54,7 +61,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.3 }}
-        className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
+        className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center"
       >
         <Button href="#contact" variant="primary" size="md">
           {t('ctaPrimary')}
@@ -70,36 +77,31 @@ export function Hero() {
     <section className="relative overflow-hidden bg-bg">
 
       {/* ── Mobile : texte au-dessus de la vidéo ─────── */}
-      <div className="block px-6 pb-6 pt-24 md:hidden">
+      <div className="block px-6 pb-6 pt-24 lg:hidden">
         <HeroContent />
       </div>
 
-      {/* ── Vidéo + overlays ──────────────────────────── */}
-      <div className="relative h-[42vh] w-full overflow-hidden sm:h-[55vh] md:h-[70vh] md:pt-10">
-        <video
-          ref={videoRef}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="h-full w-full object-cover"
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
+      {/* ── Animation + overlays ──────────────────────── */}
+      <div className="relative aspect-[19/20] w-full overflow-hidden sm:aspect-[3/2] lg:aspect-auto lg:h-[78vh]">
+        {/* Scène dessinée en code : nette à toutes les tailles, suit le thème et la langue */}
+        <HeroScene labels={scene} className="absolute inset-0 lg:left-[40%] lg:top-14" />
 
         {/* Fondu haut — desktop only (sous le header) */}
-        <div className="hero-fade-top pointer-events-none absolute inset-x-0 top-0 hidden h-56 md:block" />
+        <div className="hero-fade-top pointer-events-none absolute inset-x-0 top-0 hidden h-24 lg:block" />
 
-        {/* Fondu bas — plus court sur mobile pour préserver la vidéo */}
-        <div className="hero-fade-bottom pointer-events-none absolute inset-x-0 -bottom-px h-24 md:h-56" />
+        {/* Fondu bas */}
+        <div className="hero-fade-bottom pointer-events-none absolute inset-x-0 -bottom-px h-10 lg:h-20" />
 
         {/* Fondu gauche — desktop only (lisibilité du texte overlay) */}
-        <div className="hero-fade-left pointer-events-none absolute inset-0 hidden md:block" />
+        <div className="hero-fade-scene pointer-events-none absolute inset-0 hidden lg:block" />
 
         {/* ── Texte — overlay desktop seulement ──────── */}
-        <div className="absolute inset-0 hidden items-center pt-16 md:flex">
-          <div className="w-[48%] pl-12 md:pl-16 lg:pl-24">
-            <HeroContent />
+        <div className="absolute inset-0 hidden items-center pt-16 lg:flex">
+          <div className="w-[42%] pl-12 lg:pl-16 xl:pl-24">
+            {/* largeur bornée : le titre passe à la ligne avant le dessin, même sur très grand écran */}
+            <div className="max-w-[38rem]">
+              <HeroContent />
+            </div>
           </div>
         </div>
       </div>

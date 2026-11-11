@@ -4,9 +4,20 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import { Boxes, Cpu, Key } from 'lucide-react';
 import { SectionLabel } from './ui/SectionLabel';
+import { ApproachScene, type ApproachSceneLabels } from './ApproachScene';
 
 export function Approach() {
   const t = useTranslations('approach');
+
+  // Textes de l'animation (couches du pack, étiquette d'état)
+  const scene: ApproachSceneLabels = {
+    alt: t('scene.alt'),
+    layers: [t('scene.layerData'), t('scene.layerAi'), t('scene.layerRules'), t('scene.layerScreens')],
+    hints: [t('scene.hintData'), t('scene.hintAi'), t('scene.hintRules'), t('scene.hintScreens')],
+    pack: t('scene.pack'),
+    tailoring: t('scene.tailoring'),
+    tailored: t('scene.tailored'),
+  };
 
   const pillars = [
     { key: 'modular', Icon: Boxes },
@@ -25,7 +36,7 @@ export function Approach() {
             <p className="mt-5 text-lg text-text-muted text-balance">{t('subtitle')}</p>
           </div>
 
-          {/* Right: video — One Module */}
+          {/* Right: animation — anatomie d'un pack, dessinée en code */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,20 +44,8 @@ export function Approach() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-7"
           >
-            {/*
-              TODO: ajouter version dark quand disponible
-              (ex: Video_Factory_dark_One_module.mp4 + theme switch)
-            */}
-            <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-xl border border-border bg-bg">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 h-full w-full object-cover"
-              >
-                <source src="/animations/Video_Factory_ight_One_module.mp4" type="video/mp4" />
-              </video>
+            <div className="relative mx-auto aspect-square w-full max-w-xl overflow-hidden rounded-xl border border-border bg-bg sm:aspect-[6/5]">
+              <ApproachScene labels={scene} className="absolute inset-0" />
             </div>
           </motion.div>
         </div>

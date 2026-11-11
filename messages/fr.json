@@ -28,6 +28,23 @@
       "packsLabel": "prêts à personnaliser",
       "ai": "AI-native",
       "aiLabel": "par défaut, pas en option"
+    },
+    "scene": {
+      "alt": "Animation : une application s'assemble brique par brique sous le portique MyAppFactory, reçoit une brique sur-mesure, puis passe en ligne.",
+      "appTitle": "Votre application",
+      "building": "Assemblage",
+      "live": "En ligne",
+      "brick1": "CRM",
+      "brick2": "Documents",
+      "brick3": "Tableau de bord",
+      "brick4": "Agent IA",
+      "brick5": "Connexion",
+      "custom": "Votre métier",
+      "measure": "sur-mesure",
+      "stock": "Briques",
+      "floorStock": "Briques éprouvées",
+      "floorBuild": "Assemblage",
+      "floorLive": "Mise en ligne"
     }
   },
   "problem": {
@@ -57,6 +74,20 @@
     "eyebrow": "Notre approche",
     "title": "La Factory : packs réutilisables + personnalisation IA.",
     "subtitle": "On n'écrit pas chaque app depuis une page blanche. On assemble des modules industriels — auth, paiement, dashboards, agents IA — et on les ajuste à votre métier.",
+    "scene": {
+      "alt": "Animation : un pack éprouvé s'ouvre en quatre couches (écrans, règles métier, IA, données), l'IA l'ajuste à votre métier, puis il se referme.",
+      "layerData": "Données",
+      "layerAi": "IA",
+      "layerRules": "Règles métier",
+      "layerScreens": "Écrans",
+      "hintData": "elles restent chez vous",
+      "hintAi": "au cœur, pas en option",
+      "hintRules": "vos processus",
+      "hintScreens": "ce que vos équipes voient",
+      "pack": "Pack éprouvé",
+      "tailoring": "Personnalisation IA",
+      "tailored": "Ajusté à votre métier"
+    },
     "pillars": {
       "modular": {
         "title": "Briques éprouvées",

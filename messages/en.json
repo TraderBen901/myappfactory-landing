@@ -28,6 +28,23 @@
       "packsLabel": "ready to customize",
       "ai": "AI-native",
       "aiLabel": "by default, not as an option"
+    },
+    "scene": {
+      "alt": "Animation: an application is assembled block by block under the MyAppFactory gantry, receives a made-to-measure block, then goes live.",
+      "appTitle": "Your application",
+      "building": "Assembling",
+      "live": "Live",
+      "brick1": "CRM",
+      "brick2": "Documents",
+      "brick3": "Dashboard",
+      "brick4": "AI agent",
+      "brick5": "Sign-in",
+      "custom": "Your business",
+      "measure": "made to measure",
+      "stock": "Blocks",
+      "floorStock": "Proven blocks",
+      "floorBuild": "Assembly",
+      "floorLive": "Go-live"
     }
   },
   "problem": {
@@ -57,6 +74,20 @@
     "eyebrow": "Our approach",
     "title": "The Factory: reusable packs + AI customization.",
     "subtitle": "We don't write every app from a blank page. We assemble industrial modules — auth, payment, dashboards, AI agents — and tune them to your business.",
+    "scene": {
+      "alt": "Animation: a proven pack opens into four layers (screens, business rules, AI, data), AI tunes it to your business, then it closes again.",
+      "layerData": "Data",
+      "layerAi": "AI",
+      "layerRules": "Business rules",
+      "layerScreens": "Screens",
+      "hintData": "stays with you",
+      "hintAi": "at the core, not an add-on",
+      "hintRules": "your processes",
+      "hintScreens": "what your teams see",
+      "pack": "Proven pack",
+      "tailoring": "AI customization",
+      "tailored": "Tuned to your business"
+    },
     "pillars": {
       "modular": {
         "title": "Battle-tested blocks",

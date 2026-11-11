@@ -99,6 +99,14 @@ body {
     );
   }
 
+  /* Fondu gauche de l'animation du hero : le texte reste sur un fond uni */
+  .hero-fade-scene {
+    background: linear-gradient(to right, #F9F5EF 34%, rgba(249, 245, 239, 0) 45%);
+  }
+  .dark .hero-fade-scene {
+    background: linear-gradient(to right, #0A0A0A 34%, rgba(10, 10, 10, 0) 45%);
+  }
+
   .mono-label {
     @apply font-mono text-xs uppercase tracking-[0.2em] text-text-muted;
   }
