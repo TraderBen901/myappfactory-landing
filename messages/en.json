@@ -22,8 +22,8 @@
     "ctaPrimary": "Book a discovery call",
     "ctaSecondary": "See our work",
     "stats": {
-      "speed": "6x faster",
-      "speedLabel": "than classic dev",
+      "speed": "6 weeks",
+      "speedLabel": "on average, from idea to go-live",
       "packs": "Reusable packs",
       "packsLabel": "ready to customize",
       "ai": "AI-native",
@@ -204,7 +204,7 @@
     "personas": {
       "pme": {
         "title": "SMBs going digital",
-        "body": "You've spotted a business bottleneck. Excel and generic SaaS aren't enough anymore."
+        "body": "You've spotted a business bottleneck. Spreadsheets and generic SaaS aren't enough anymore."
       },
       "startup": {
         "title": "Startups & scale-ups",
@@ -245,7 +245,7 @@
         "label": "Level 2 · Intermediate",
         "title": "AI Workflow",
         "duration": "1 to 2 days",
-        "body": "Turn repetitive tasks into AI workflows: forms, documents, CRM, Google Sheets, Notion, Airtable, n8n, Make or Zapier.",
+        "body": "Turn repetitive tasks into AI workflows: forms, documents, CRM, spreadsheets and automation tools.",
         "audience": "Operations, sales, marketing, HR, admin teams and consultants.",
         "result": "One concrete workflow and an AI opportunity matrix."
       },
@@ -283,7 +283,7 @@
   },
   "cta": {
     "eyebrow": "Let's talk",
-    "title": "Ready for takeoff?",
+    "title": "Shall we lay the first brick?",
     "subtitle": "30 minutes. No commitment. We'll honestly tell you what we can build — or what we can't.",
     "expectations": {
       "title": "What to expect",
@@ -296,7 +296,7 @@
     },
     "emailFallback": {
       "label": "Prefer to send an email?",
-      "address": "benoit.schiepers@gmail.com"
+      "address": "benoit@myappfactory.site"
     },
     "form": {
       "progress": "Progress",

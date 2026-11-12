@@ -33,7 +33,7 @@ export function ForWho() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               className="py-8 md:px-8 md:py-10 md:first:pl-0 md:last:pr-0"
             >
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 md:flex-col md:items-start lg:flex-row lg:items-center">
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-accent/30 bg-accent/10 text-accent">
                   <Icon className="h-5 w-5" />
                 </div>
