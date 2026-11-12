@@ -202,7 +202,7 @@ function LeoDemo({ t, play }: DemoProps) {
 }
 
 const apps: AppItem[] = [
-  { key: 'harold', href: 'https://haroldproject.com', Demo: HaroldDemo },
+  { key: 'harold', href: 'https://harold-v5-web.onrender.com/bienvenue.html', Demo: HaroldDemo },
   { key: 'telle', href: 'https://tell-e.tech', Demo: SallyDemo },
   { key: 'leo', href: 'https://www.leoproject.live', Demo: LeoDemo },
 ];
