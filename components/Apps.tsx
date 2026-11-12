@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { motion, useInView, useReducedMotion } from 'framer-motion';
-import { ArrowUpRight, Gift, Mail, Plus, Send, Sparkles } from 'lucide-react';
+import { ArrowUpRight, FileDown, FileText, Mail, Send, Sparkles } from 'lucide-react';
 import { SectionLabel } from './ui/SectionLabel';
 
 /* Chaque réalisation montre un écran reconstitué du produit, dessiné en code :
@@ -16,11 +16,12 @@ import { SectionLabel } from './ui/SectionLabel';
    montre l'état final. */
 
 type T = ReturnType<typeof useTranslations>;
-type DemoProps = { t: T; play: number };
+type DemoProps = { t: T; play: number; locale: string };
 
 type AppItem = {
   key: 'harold' | 'telle' | 'leo';
   href: string;
+  internal?: boolean;
   Demo: (props: DemoProps) => JSX.Element;
 };
 
@@ -108,12 +109,17 @@ function HaroldDemo({ t, play }: DemoProps) {
   );
 }
 
-/** SaLLy : la question du client, la réponse, puis les trois suggestions. */
-function SallyDemo({ t, play }: DemoProps) {
-  const products = [
-    ['49 €', 70],
-    ['35 €', 54],
-    ['62 €', 62],
+const euros = (n: number, locale: string) => {
+  const s = String(n).replace(/\B(?=(\d{3})+(?!\d))/g, locale === 'fr' ? ' ' : ',');
+  return locale === 'fr' ? `${s} €` : `€${s}`;
+};
+
+/** SaLLy : la demande du client, la réponse, puis le devis qui se construit. */
+function SallyDemo({ t, play, locale }: DemoProps) {
+  const total = useCountUp(1800, play, 1500, 800);
+  const lines = [
+    [t('demo.sally.line1'), 1600],
+    [t('demo.sally.line2'), 200],
   ] as const;
   return (
     <div className="grid h-full grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] text-[11px] leading-tight">
@@ -133,24 +139,29 @@ function SallyDemo({ t, play }: DemoProps) {
           <Send className="ml-auto h-3 w-3 text-accent" />
         </div>
       </div>
-      <div className="p-3">
-        <div className="flex items-center gap-1.5 font-semibold" style={anim(play, 'demo-in', 0.95, 0.35)}>
-          <Gift className="h-3 w-3 text-accent" />
-          {t('demo.sally.suggestions')}
+      <div className="flex flex-col p-3">
+        <div className="flex items-baseline justify-between gap-2" style={anim(play, 'demo-in', 0.95, 0.35)}>
+          <span className="flex items-center gap-1.5 font-semibold">
+            <FileText className="h-3 w-3 text-accent" />
+            {t('demo.sally.quote')}
+          </span>
+          <span className="font-mono text-[9px] text-text-muted">D-2026-041</span>
         </div>
-        <div className="mt-2.5 space-y-2">
-          {products.map(([price, w], i) => (
-            <div key={price} className="flex items-center gap-2 rounded-lg border border-border bg-bg p-1.5" style={anim(play, 'demo-in', 1.1 + i * 0.16, 0.4)}>
-              <span className="h-8 w-8 shrink-0 rounded-md bg-text/[0.07]" />
-              <div className="min-w-0 flex-1">
-                <span className="block h-1.5 rounded-full bg-text/10" style={{ width: `${w}%` }} />
-                <span className="mt-1.5 block font-mono text-[9.5px] text-text-muted">{price}</span>
-              </div>
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-accent text-bg" style={anim(play, 'demo-pop', 1.3 + i * 0.16, 0.35)}>
-                <Plus className="h-3 w-3" />
-              </span>
+        <div className="mt-2.5 divide-y divide-border rounded-lg border border-border bg-bg">
+          {lines.map(([label, amount], i) => (
+            <div key={label} className="flex items-center justify-between gap-2 px-2 py-[7px]" style={anim(play, 'demo-in', 1.1 + i * 0.2, 0.4)}>
+              <span className="min-w-0 truncate">{label}</span>
+              <span className="shrink-0 font-mono text-[9.5px] text-text-muted">{euros(amount, locale)}</span>
             </div>
           ))}
+        </div>
+        <div className="mt-2.5 flex items-center justify-between px-1 font-semibold" style={anim(play, 'demo-in', 1.5, 0.4)}>
+          <span>{t('demo.sally.total')}</span>
+          <span className="font-mono text-[12px] text-accent">{euros(total, locale)}</span>
+        </div>
+        <div className="mt-auto inline-flex items-center gap-1 self-start rounded-md bg-accent px-2 py-1 text-[9.5px] font-medium text-bg" style={anim(play, 'demo-pop', 1.9, 0.4)}>
+          <FileDown className="h-2.5 w-2.5" />
+          PDF
         </div>
       </div>
     </div>
@@ -201,9 +212,10 @@ function LeoDemo({ t, play }: DemoProps) {
   );
 }
 
+// `internal` : une page de ce site (préfixée par la langue, ouverte dans le même onglet).
 const apps: AppItem[] = [
   { key: 'harold', href: 'https://harold-v5-web.onrender.com/bienvenue.html', Demo: HaroldDemo },
-  { key: 'telle', href: 'https://tell-e.tech', Demo: SallyDemo },
+  { key: 'telle', href: '/sally', internal: true, Demo: SallyDemo },
   { key: 'leo', href: 'https://www.leoproject.live', Demo: LeoDemo },
 ];
 
@@ -230,6 +242,7 @@ export function Apps() {
 }
 
 function AppCard({ app, index, t }: { app: AppItem; index: number; t: T }) {
+  const locale = useLocale();
   const [play, setPlay] = useState(0);
   const reduce = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
@@ -253,7 +266,13 @@ function AppCard({ app, index, t }: { app: AppItem; index: number; t: T }) {
       // sur tablette (2 colonnes), la troisième carte se centre au lieu de rester seule à gauche
       className={index === 2 ? 'min-w-0 md:col-span-2 md:mx-auto md:w-[calc(50%-0.75rem)] lg:col-span-1 lg:mx-0 lg:w-auto' : 'min-w-0'}
     >
-      <a href={app.href} target="_blank" rel="noopener noreferrer" className="block h-full" onMouseEnter={replay} onFocus={replay}>
+      <a
+        href={app.internal ? `/${locale}${app.href}` : app.href}
+        {...(app.internal ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+        className="block h-full"
+        onMouseEnter={replay}
+        onFocus={replay}
+      >
         <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-bg transition hover:border-accent/40 hover:shadow-lg hover:shadow-black/5">
           {/* Écran du produit, posé sur un présentoir */}
           <div className="border-b border-border bg-surface-2/70 px-5 pt-5">
@@ -265,7 +284,7 @@ function AppCard({ app, index, t }: { app: AppItem; index: number; t: T }) {
                 <span className="ml-2 font-mono text-[10px] text-text-muted">{t(`items.${app.key}.name`)}</span>
               </div>
               <div className="h-[196px] overflow-hidden" aria-hidden="true">
-                <app.Demo key={play} t={t} play={play} />
+                <app.Demo key={play} t={t} play={play} locale={locale} />
               </div>
             </div>
           </div>

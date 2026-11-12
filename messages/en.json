@@ -132,9 +132,12 @@
         "s3": "Offer"
       },
       "sally": {
-        "ask": "I'm looking for an original gift for my wife.",
-        "reply": "Here are three ideas for her:",
-        "suggestions": "Suggestions"
+        "ask": "I need 200 engraved bottles for our seminar.",
+        "reply": "Here is quote D‑2026‑041.",
+        "quote": "Quote",
+        "line1": "200 × Bottle",
+        "line2": "Engraving",
+        "total": "Total excl. VAT"
       },
       "leo": {
         "k1": "Meetings this month",
@@ -154,8 +157,8 @@
       },
       "telle": {
         "name": "SaLLy",
-        "category": "E-commerce · AI",
-        "description": "Virtual personal shopper that turns e-commerce visitors into buyers with AI-driven personalized recommendations.",
+        "category": "Sales · Quotes",
+        "description": "AI sales assistant that understands the customer's need, searches your catalog and prepares the quote.",
         "cta": "Visit"
       },
       "leo": {
@@ -469,6 +472,201 @@
     "apps": ["LeO", "SaLLy", "HaRold", "+ your tools"],
     "ctaPrimary": "Discover the AI OS",
     "ctaSecondary": "Book a diagnostic"
+  },
+  "sally": {
+    "meta": {
+      "title": "SaLLy — The AI sales assistant that prepares your quotes · MyAppFactory",
+      "description": "SaLLy understands your customer's request, searches your catalog and builds the quote. You review, you send."
+    },
+    "hero": {
+      "eyebrow": "SaLLy · AI sales assistant",
+      "title": "From the customer's need to the quote,",
+      "titleAccent": "in a single conversation.",
+      "subtitle": "SaLLy understands the request, searches your catalog and builds the quote. You review, you send.",
+      "ctaPrimary": "Request a demo",
+      "ctaSecondary": "See how it works",
+      "tag": "A MyAppFactory application"
+    },
+    "demo": {
+      "alt": "Demo: a customer asks for 200 engraved bottles, SaLLy searches the catalog and builds quote D-2026-041.",
+      "ask": "Hello, I need 200 engraved bottles for our March seminar.",
+      "searching": "Searching the catalog",
+      "proposal": "Three bottles fit. I'll go with the Sport Alu 750 ml, with logo engraving.",
+      "ready": "Quote D‑2026‑041 is ready. Would you like to review it?",
+      "placeholder": "Write to SaLLy…",
+      "tabCatalog": "Catalog",
+      "tabQuote": "Quote",
+      "p1": "Sport Alu bottle 750 ml",
+      "p2": "Steel bottle 500 ml",
+      "p3": "Glass bottle 500 ml",
+      "unit": "each",
+      "quote": "Quote",
+      "statusDraft": "In progress",
+      "statusReady": "Ready for review",
+      "line1": "200 × Sport Alu bottle 750 ml",
+      "line2": "Logo engraving",
+      "exVat": "Total excl. VAT",
+      "vat": "VAT 21%",
+      "incVat": "Total incl. VAT",
+      "export": "Export as PDF",
+      "sample": "Sample data"
+    },
+    "problem": {
+      "eyebrow": "The problem",
+      "title": "A quote is rarely five minutes.",
+      "subtitle": "Between the customer's request and the PDF you send, the same manual steps come back every time.",
+      "cards": {
+        "wait": {
+          "title": "The request waits",
+          "body": "The customer writes on Monday. The quote goes out when someone has an hour to spare."
+        },
+        "copy": {
+          "title": "Prices get retyped",
+          "body": "The catalog on one side, the quote on the other. Every copy is a chance to slip by one line."
+        },
+        "head": {
+          "title": "The catalog lives in one head",
+          "body": "Knowing which product fits which request is often one person's knowledge."
+        }
+      }
+    },
+    "steps": {
+      "eyebrow": "How it works",
+      "title": "Three beats, one conversation.",
+      "items": {
+        "understand": {
+          "title": "It understands the need",
+          "body": "Quantity, budget, deadline, occasion: SaLLy asks the missing questions, like a good salesperson would."
+        },
+        "search": {
+          "title": "It searches your catalog",
+          "body": "Your products, your references, your prices. SaLLy offers what you actually sell, not what it imagines."
+        },
+        "build": {
+          "title": "It builds the quote",
+          "body": "Lines, quantities, options, totals with and without VAT. The quote is numbered and ready for review."
+        }
+      },
+      "chip1": "200 units",
+      "chip2": "March",
+      "chip3": "engraving"
+    },
+    "features": {
+      "eyebrow": "What SaLLy can do",
+      "title": "The work of a quote, without the retyping.",
+      "items": {
+        "talk": {
+          "title": "Talk in plain language",
+          "body": "The customer writes the way they speak. No twenty-field form."
+        },
+        "select": {
+          "title": "Suggest a selection",
+          "body": "Several catalog products, with their prices, to compare at a glance."
+        },
+        "edit": {
+          "title": "Edit through conversation",
+          "body": "“Make it 250 units”, “drop the engraving”: the quote updates."
+        },
+        "multi": {
+          "title": "Run several quotes",
+          "body": "Two options for the same customer? SaLLy keeps them side by side."
+        },
+        "totals": {
+          "title": "Compute the totals",
+          "body": "Excl. VAT, VAT, incl. VAT: amounts are computed, not typed."
+        },
+        "pdf": {
+          "title": "Export as PDF",
+          "body": "A clean document, ready to send under your name."
+        }
+      }
+    },
+    "guardrails": {
+      "eyebrow": "The guardrails",
+      "title": "An AI that doesn't make up your prices.",
+      "subtitle": "SaLLy points, your database answers. That is the rule it is built on.",
+      "cards": {
+        "prices": {
+          "title": "Prices come from your database",
+          "body": "The AI picks the product. The price, name and reference are read from your catalog, never written by the AI."
+        },
+        "number": {
+          "title": "The number is assigned by the system",
+          "body": "No duplicates, no invented numbers: each quote gets its own when it is saved."
+        },
+        "isolation": {
+          "title": "Your data stays yours",
+          "body": "Each merchant has its own catalog and quotes, isolated from everyone else's."
+        },
+        "history": {
+          "title": "Nothing disappears silently",
+          "body": "A product removed from the catalog stays readable in quotes already issued."
+        }
+      },
+      "closing": "And you are the one who sends: SaLLy prepares, you review and approve."
+    },
+    "tools": {
+      "eyebrow": "With your tools",
+      "title": "You keep your tools.",
+      "body": "SaLLy reads your catalog and the prices in your management software. It doesn't replace them.",
+      "catalog": "Your catalog",
+      "erp": "Your management software",
+      "output": "Quote as PDF",
+      "platform": "SaLLy is a MyAppFactory application. It can work on its own, or with the others.",
+      "platformLink": "Discover MyAppFactory"
+    },
+    "forWho": {
+      "eyebrow": "Who it's for",
+      "title": "For those who write quotes every day.",
+      "items": {
+        "wholesale": {
+          "title": "Wholesalers and distributors",
+          "body": "A large catalog, requests every day."
+        },
+        "gifts": {
+          "title": "Business gifts and custom items",
+          "body": "Quantities, markings, deadlines: every request is a calculation."
+        },
+        "sales": {
+          "title": "Sales teams",
+          "body": "Less time on quotes, more time with customers."
+        }
+      }
+    },
+    "faq": {
+      "eyebrow": "Frequent questions",
+      "title": "What people ask first.",
+      "items": {
+        "q1": {
+          "q": "Can SaLLy get a price wrong?",
+          "a": "It doesn't write prices. It points to a product; the price is read from your catalog. If the price is right in your system, it is right in the quote."
+        },
+        "q2": {
+          "q": "Do we need to change software?",
+          "a": "No. SaLLy plugs into your catalog and the prices you already use."
+        },
+        "q3": {
+          "q": "Who sends the quote to the customer?",
+          "a": "You do. SaLLy prepares the document; you review it, adjust it if needed, and send it."
+        },
+        "q4": {
+          "q": "What if the customer changes their mind?",
+          "a": "They say so, or you do: SaLLy changes the quantities or products and recalculates."
+        },
+        "q5": {
+          "q": "How do we start?",
+          "a": "With half an hour on how you write a quote today. You leave with an honest opinion, even if we don't work together."
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "Shall we talk?",
+      "title": "Shall we look at your next quote together?",
+      "subtitle": "Thirty minutes, no commitment. We start from how you write a quote today.",
+      "button": "Request a demo",
+      "emailLabel": "Or by e-mail:",
+      "email": "benoit@myappfactory.site"
+    }
   },
   "footer": {
     "tagline": "Your custom app factory.",

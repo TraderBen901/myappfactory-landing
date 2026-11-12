@@ -132,9 +132,12 @@
         "s3": "Offre"
       },
       "sally": {
-        "ask": "Je cherche un cadeau original pour ma femme.",
-        "reply": "Voici trois idées pour elle :",
-        "suggestions": "Suggestions"
+        "ask": "Il me faut 200 gourdes gravées pour notre séminaire.",
+        "reply": "Voici le devis D‑2026‑041.",
+        "quote": "Devis",
+        "line1": "200 × Gourde",
+        "line2": "Gravure",
+        "total": "Total HTVA"
       },
       "leo": {
         "k1": "RDV ce mois",
@@ -154,8 +157,8 @@
       },
       "telle": {
         "name": "SaLLy",
-        "category": "E-commerce · IA",
-        "description": "Conseiller d'achat virtuel qui convertit les visiteurs de votre boutique en ligne en acheteurs grâce à des recommandations IA personnalisées.",
+        "category": "Ventes · Devis",
+        "description": "Assistante commerciale IA qui comprend le besoin du client, cherche dans votre catalogue et prépare le devis.",
         "cta": "Découvrir"
       },
       "leo": {
@@ -469,6 +472,201 @@
     "apps": ["LeO", "SaLLy", "HaRold", "+ vos outils"],
     "ctaPrimary": "Découvrir l'AI OS",
     "ctaSecondary": "Réserver un diagnostic"
+  },
+  "sally": {
+    "meta": {
+      "title": "SaLLy — L'assistante commerciale IA qui prépare vos devis · MyAppFactory",
+      "description": "SaLLy comprend la demande de votre client, cherche dans votre catalogue et construit le devis. Vous relisez, vous envoyez."
+    },
+    "hero": {
+      "eyebrow": "SaLLy · Assistante commerciale IA",
+      "title": "Du besoin du client au devis,",
+      "titleAccent": "dans une seule conversation.",
+      "subtitle": "SaLLy comprend la demande, cherche dans votre catalogue et construit le devis. Vous relisez, vous envoyez.",
+      "ctaPrimary": "Demander une démonstration",
+      "ctaSecondary": "Voir comment ça marche",
+      "tag": "Une application MyAppFactory"
+    },
+    "demo": {
+      "alt": "Démonstration : un client demande 200 gourdes gravées, SaLLy cherche dans le catalogue puis construit le devis D-2026-041.",
+      "ask": "Bonjour, il me faut 200 gourdes gravées pour notre séminaire de mars.",
+      "searching": "Je cherche dans le catalogue",
+      "proposal": "Trois gourdes conviennent. Je pars sur la Sport Alu 750 ml, avec la gravure du logo.",
+      "ready": "Le devis D‑2026‑041 est prêt. Vous le relisez ?",
+      "placeholder": "Écrire à SaLLy…",
+      "tabCatalog": "Catalogue",
+      "tabQuote": "Devis",
+      "p1": "Gourde Sport Alu 750 ml",
+      "p2": "Gourde Inox 500 ml",
+      "p3": "Gourde Verre 500 ml",
+      "unit": "la pièce",
+      "quote": "Devis",
+      "statusDraft": "En préparation",
+      "statusReady": "Prêt à relire",
+      "line1": "200 × Gourde Sport Alu 750 ml",
+      "line2": "Gravure du logo",
+      "exVat": "Total HTVA",
+      "vat": "TVA 21 %",
+      "incVat": "Total TVAC",
+      "export": "Exporter en PDF",
+      "sample": "Données d'exemple"
+    },
+    "problem": {
+      "eyebrow": "Le problème",
+      "title": "Un devis, c'est rarement cinq minutes.",
+      "subtitle": "Entre la demande du client et le PDF envoyé, il y a toujours les mêmes étapes à la main.",
+      "cards": {
+        "wait": {
+          "title": "La demande attend",
+          "body": "Le client écrit le lundi. Le devis part quand quelqu'un a une heure devant lui."
+        },
+        "copy": {
+          "title": "Les prix se recopient",
+          "body": "Le catalogue d'un côté, le devis de l'autre. Chaque recopie est une occasion de se tromper d'une ligne."
+        },
+        "head": {
+          "title": "Le catalogue est dans une tête",
+          "body": "Savoir quel produit convient à quelle demande, c'est souvent le savoir d'une seule personne."
+        }
+      }
+    },
+    "steps": {
+      "eyebrow": "Comment ça marche",
+      "title": "Trois temps, une conversation.",
+      "items": {
+        "understand": {
+          "title": "Elle comprend le besoin",
+          "body": "Quantité, budget, délai, occasion : SaLLy pose les questions qui manquent, comme le ferait un bon vendeur."
+        },
+        "search": {
+          "title": "Elle cherche dans votre catalogue",
+          "body": "Vos produits, vos références, vos prix. SaLLy propose ce qui existe chez vous, pas ce qu'elle imagine."
+        },
+        "build": {
+          "title": "Elle construit le devis",
+          "body": "Lignes, quantités, options, totaux HTVA et TVAC. Le devis est numéroté et prêt à relire."
+        }
+      },
+      "chip1": "200 pièces",
+      "chip2": "mars",
+      "chip3": "gravure"
+    },
+    "features": {
+      "eyebrow": "Ce que SaLLy sait faire",
+      "title": "Le travail d'un devis, sans la ressaisie.",
+      "items": {
+        "talk": {
+          "title": "Converser en langage naturel",
+          "body": "Le client écrit comme il parle. Pas de formulaire à vingt champs."
+        },
+        "select": {
+          "title": "Proposer une sélection",
+          "body": "Plusieurs produits du catalogue, avec leur prix, à comparer d'un coup d'œil."
+        },
+        "edit": {
+          "title": "Modifier par la conversation",
+          "body": "« Passe à 250 pièces », « retire la gravure » : le devis se met à jour."
+        },
+        "multi": {
+          "title": "Mener plusieurs devis",
+          "body": "Deux variantes pour le même client ? SaLLy les garde côte à côte."
+        },
+        "totals": {
+          "title": "Calculer les totaux",
+          "body": "HTVA, TVA, TVAC : les montants sont calculés, pas tapés."
+        },
+        "pdf": {
+          "title": "Exporter en PDF",
+          "body": "Un document propre, prêt à envoyer sous votre nom."
+        }
+      }
+    },
+    "guardrails": {
+      "eyebrow": "Les garde-fous",
+      "title": "Une IA qui n'invente pas vos prix.",
+      "subtitle": "SaLLy désigne, votre base de données répond. C'est la règle sur laquelle elle est construite.",
+      "cards": {
+        "prices": {
+          "title": "Les prix viennent de votre base",
+          "body": "L'IA choisit le produit. Le prix, le nom et la référence sont lus dans votre catalogue, jamais écrits par l'IA."
+        },
+        "number": {
+          "title": "Le numéro est attribué par le système",
+          "body": "Pas de doublon, pas de numéro inventé : chaque devis reçoit le sien au moment où il est enregistré."
+        },
+        "isolation": {
+          "title": "Vos données restent les vôtres",
+          "body": "Chaque marchand a son catalogue et ses devis, isolés de ceux des autres."
+        },
+        "history": {
+          "title": "Rien ne s'efface en silence",
+          "body": "Un produit retiré du catalogue reste lisible dans les devis déjà émis."
+        }
+      },
+      "closing": "Et c'est vous qui envoyez : SaLLy prépare, vous relisez et vous validez."
+    },
+    "tools": {
+      "eyebrow": "Avec vos outils",
+      "title": "Vous gardez vos outils.",
+      "body": "SaLLy lit votre catalogue et les tarifs de votre logiciel de gestion. Elle ne les remplace pas.",
+      "catalog": "Votre catalogue",
+      "erp": "Votre logiciel de gestion",
+      "output": "Devis en PDF",
+      "platform": "SaLLy est une application MyAppFactory. Elle peut travailler seule, ou avec les autres.",
+      "platformLink": "Découvrir MyAppFactory"
+    },
+    "forWho": {
+      "eyebrow": "Pour qui",
+      "title": "Pour ceux qui font des devis tous les jours.",
+      "items": {
+        "wholesale": {
+          "title": "Grossistes et distributeurs",
+          "body": "Un catalogue large, des demandes tous les jours."
+        },
+        "gifts": {
+          "title": "Cadeaux d'affaires et objets personnalisés",
+          "body": "Des quantités, des marquages, des délais : chaque demande est un calcul."
+        },
+        "sales": {
+          "title": "Équipes commerciales",
+          "body": "Moins de temps sur les devis, plus de temps avec les clients."
+        }
+      }
+    },
+    "faq": {
+      "eyebrow": "Questions fréquentes",
+      "title": "Ce qu'on nous demande d'abord.",
+      "items": {
+        "q1": {
+          "q": "SaLLy peut-elle se tromper de prix ?",
+          "a": "Elle ne les écrit pas. Elle désigne un produit ; le prix est lu dans votre catalogue. Si le prix est juste chez vous, il est juste dans le devis."
+        },
+        "q2": {
+          "q": "Faut-il changer de logiciel ?",
+          "a": "Non. SaLLy se branche sur votre catalogue et sur les tarifs que vous utilisez déjà."
+        },
+        "q3": {
+          "q": "Qui envoie le devis au client ?",
+          "a": "Vous. SaLLy prépare le document ; vous le relisez, vous le corrigez si besoin, et vous l'envoyez."
+        },
+        "q4": {
+          "q": "Et si le client change d'avis ?",
+          "a": "Il le dit, ou vous le dites : SaLLy modifie les quantités ou les produits et recalcule."
+        },
+        "q5": {
+          "q": "Comment commence-t-on ?",
+          "a": "Par une demi-heure sur votre façon de faire un devis aujourd'hui. Vous repartez avec un avis honnête, même si on ne travaille pas ensemble."
+        }
+      }
+    },
+    "cta": {
+      "eyebrow": "On en parle ?",
+      "title": "On regarde votre prochain devis ensemble ?",
+      "subtitle": "Trente minutes, sans engagement. On part de votre façon de faire un devis aujourd'hui.",
+      "button": "Demander une démonstration",
+      "emailLabel": "Ou par e-mail :",
+      "email": "benoit@myappfactory.site"
+    }
   },
   "footer": {
     "tagline": "Votre usine à applications sur-mesure.",
