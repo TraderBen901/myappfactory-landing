@@ -683,7 +683,7 @@ export function HeroScene({ labels, className = '' }: { labels: HeroSceneLabels;
 
 const CSS = `${SCENE_CSS}
 .hs-stage{position:absolute;inset:0;transform-origin:55% 50%}
-@media (max-width:1023px){.hs-stage{transform:translate(-2%,5%) scale(1.14)}}
+@media (max-width:1279px){.hs-stage{transform:translate(-2%,5%) scale(1.14)}}
 @media (max-width:639px){.hs-stage{transform:translate(-3%,2%) scale(1.85)}}
 .hs .fr .ft{fill:var(--hs-mt1)}.hs .fr .fs{fill:var(--hs-mt2)}.hs .fr .ff{fill:var(--hs-front)}
 .hs .trap{fill:var(--hs-ink);opacity:.1}

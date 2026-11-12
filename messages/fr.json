@@ -147,7 +147,7 @@
     },
     "items": {
       "harold": {
-        "name": "Tell-E/HaRold",
+        "name": "HaRold",
         "category": "RH · Recrutement",
         "description": "Workspace de recrutement augmenté à l'IA pour scorer, organiser et accélérer le sourcing.",
         "cta": "Découvrir"
@@ -412,7 +412,7 @@
       "appsLabel": "Nos applications sur-mesure, en production",
       "apps": {
         "leo": { "name": "LeO", "tag": "agent commercial B2B" },
-        "harold": { "name": "Tell-E / HaRold", "tag": "analyse & recrutement" },
+        "harold": { "name": "HaRold", "tag": "analyse & recrutement" },
         "sally": { "name": "SaLLy", "tag": "app métier" }
       }
     },

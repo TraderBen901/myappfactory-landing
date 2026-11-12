@@ -33,7 +33,7 @@ export function WhatWeBuild() {
           <p className="mt-5 text-lg text-text-muted text-balance">{t('subtitle')}</p>
         </div>
 
-        <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-7 lg:gap-x-3 lg:gap-y-3.5">
+        <div className="mt-14 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-7 lg:gap-x-3 lg:gap-y-3.5">
           {categories.map(({ key, Icon, ready }, i) => (
             <motion.div
               key={key}

@@ -43,7 +43,7 @@ export function Process() {
             </span>
             <span className="flex h-10 items-center gap-2 overflow-hidden rounded-lg bg-text/10 px-3 text-sm font-medium">
               <span className="font-mono text-xs text-text-muted">{t('steps.selection.number')}</span>
-              <span className="truncate">{t('steps.selection.title')}</span>
+              <span className="hidden truncate lg:inline">{t('steps.selection.title')}</span>
             </span>
             <span className="col-span-3 flex h-10 items-center gap-2 overflow-hidden rounded-lg bg-accent px-3 text-sm font-medium text-bg">
               <span className="font-mono text-xs text-bg/70">{t('steps.customization.number')}</span>
@@ -57,7 +57,7 @@ export function Process() {
           </div>
         </motion.div>
 
-        <ol className="mt-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <ol className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {steps.map((step, i) => (
             <motion.li
               key={step}

@@ -77,27 +77,27 @@ export function Hero() {
     <section className="relative overflow-hidden bg-bg">
 
       {/* ── Mobile : texte au-dessus de la vidéo ─────── */}
-      <div className="block px-6 pb-6 pt-24 lg:hidden">
+      <div className="block px-6 pb-6 pt-24 xl:hidden">
         <HeroContent />
       </div>
 
       {/* ── Animation + overlays ──────────────────────── */}
-      <div className="relative aspect-[19/20] w-full overflow-hidden sm:aspect-[3/2] lg:aspect-auto lg:h-[78vh]">
+      <div className="relative aspect-[19/20] w-full overflow-hidden sm:aspect-[3/2] lg:aspect-[2/1] xl:aspect-auto xl:h-[78vh]">
         {/* Scène dessinée en code : nette à toutes les tailles, suit le thème et la langue */}
-        <HeroScene labels={scene} className="absolute inset-0 lg:left-[40%] lg:top-14" />
+        <HeroScene labels={scene} className="absolute inset-0 xl:left-[40%] xl:top-14" />
 
         {/* Fondu haut — desktop only (sous le header) */}
-        <div className="hero-fade-top pointer-events-none absolute inset-x-0 top-0 hidden h-24 lg:block" />
+        <div className="hero-fade-top pointer-events-none absolute inset-x-0 top-0 hidden h-24 xl:block" />
 
         {/* Fondu bas */}
-        <div className="hero-fade-bottom pointer-events-none absolute inset-x-0 -bottom-px h-10 lg:h-20" />
+        <div className="hero-fade-bottom pointer-events-none absolute inset-x-0 -bottom-px h-10 xl:h-20" />
 
         {/* Fondu gauche — desktop only (lisibilité du texte overlay) */}
-        <div className="hero-fade-scene pointer-events-none absolute inset-0 hidden lg:block" />
+        <div className="hero-fade-scene pointer-events-none absolute inset-0 hidden xl:block" />
 
         {/* ── Texte — overlay desktop seulement ──────── */}
-        <div className="absolute inset-0 hidden items-center pt-16 lg:flex">
-          <div className="w-[42%] pl-12 lg:pl-16 xl:pl-24">
+        <div className="absolute inset-0 hidden items-center pt-16 xl:flex">
+          <div className="w-[36%] pl-24 2xl:w-[42%]">
             {/* largeur bornée : le titre passe à la ligne avant le dessin, même sur très grand écran */}
             <div className="max-w-[38rem]">
               <HeroContent />

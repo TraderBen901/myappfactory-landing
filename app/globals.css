@@ -135,3 +135,26 @@ body {
     @apply mr-2 inline-block h-1.5 w-1.5 rounded-full bg-accent align-middle;
   }
 }
+
+/* Petites animations des écrans de démonstration (section « Déjà en production »), rejouées au survol */
+@keyframes demo-in {
+  from { opacity: 0; transform: translateY(7px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes demo-left {
+  from { opacity: 0; transform: translateX(-10px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes demo-right {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes demo-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+@keyframes demo-pop {
+  0% { opacity: 0; transform: scale(0.5); }
+  65% { opacity: 1; transform: scale(1.12); }
+  100% { opacity: 1; transform: scale(1); }
+}
