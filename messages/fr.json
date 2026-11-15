@@ -264,25 +264,12 @@
   },
   "team": {
     "eyebrow": "L'équipe",
-    "title": "Trois cofondateurs, trois métiers.",
-    "subtitle": "MyAppFactory réunit trois associés belges, entre Charleroi, Bruxelles et Liège.",
+    "title": "Trois cofondateurs, trois ingénieurs civils.",
+    "subtitle": "Trois profils complémentaires, qui couvrent ensemble toute l'application, des écrans aux bases de données.",
     "role": "Cofondateur",
+    "degree": "Ingénieur civil",
     "linkLabel": "Profil LinkedIn",
-    "linkAria": "Profil LinkedIn de {name} (nouvel onglet)",
-    "members": {
-      "dominique": {
-        "focus": "Direction et stratégie",
-        "city": "Charleroi"
-      },
-      "arnaud": {
-        "focus": "Ventes et partenariats",
-        "city": "Bruxelles"
-      },
-      "benoit": {
-        "focus": "Architecture IA et automatisation",
-        "city": "Liège"
-      }
-    }
+    "linkAria": "Profil LinkedIn de {name} (nouvel onglet)"
   },
   "cta": {
     "eyebrow": "On en parle ?",

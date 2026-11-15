@@ -4,10 +4,11 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import clsx from 'clsx';
-import { Linkedin, MapPin } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 import { SectionLabel } from './ui/SectionLabel';
 
 // Les trois cofondateurs, dans l'ordre donné par Benoît. Noms, liens et photos : profils LinkedIn publics (photos du 04/11/2026).
+// Choix de Benoît (14/11/2026) : tous trois ingénieurs civils, profils complémentaires, sans étiquette par personne.
 const MEMBERS = [
   { key: 'dominique', name: 'Dominique Daue', photo: '/team/dominique-daue.jpg', linkedin: 'https://www.linkedin.com/in/dominique-daue-8399528/' },
   { key: 'arnaud', name: 'Arnaud Boland', photo: '/team/arnaud-boland.jpg', linkedin: 'https://www.linkedin.com/in/arnaudboland/' },
@@ -35,7 +36,7 @@ export function Team() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative flex flex-col items-center rounded-2xl border border-border bg-bg px-6 pb-8 pt-16 text-center"
+                className="relative flex flex-col items-center rounded-2xl border border-border bg-bg px-6 pb-8 pt-16 text-center md:max-lg:px-4"
               >
                 {/*
                   Le trait vert qui relie les trois associés (à partir de la tablette), du centre de la 1re carte
@@ -57,12 +58,10 @@ export function Team() {
                 </div>
 
                 <p className="font-mono text-xs uppercase tracking-widest text-accent">{t('role')}</p>
-                <h3 className="mt-3 text-2xl font-semibold tracking-tight">{m.name}</h3>
-                <p className="mt-3 text-text-muted">{t(`members.${m.key}.focus`)}</p>
-                <p className="mb-7 mt-2 inline-flex items-center gap-1.5 text-sm text-text-muted">
-                  <MapPin className="h-3.5 w-3.5 shrink-0" aria-hidden />
-                  {t(`members.${m.key}.city`)}
-                </p>
+                {/* Sur tablette, les cartes sont étroites : le nom garde la place de deux lignes,
+                    pour que les trois cartes restent alignées. */}
+                <h3 className="mt-3 flex items-center text-2xl font-semibold tracking-tight md:max-lg:min-h-[4rem]">{m.name}</h3>
+                <p className="mb-7 mt-3 text-text-muted">{t('degree')}</p>
 
                 {/* mt-auto : les trois boutons restent alignés en bas, même si un nom passe sur deux lignes */}
                 <a
@@ -70,7 +69,7 @@ export function Team() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={t('linkAria', { name: m.name })}
-                  className="mt-auto inline-flex min-h-[44px] items-center gap-2 rounded-full border border-border px-5 text-sm font-medium text-text transition hover:border-accent hover:text-accent focus-visible:border-accent focus-visible:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                  className="mt-auto inline-flex min-h-[44px] items-center gap-2 whitespace-nowrap rounded-full border border-border px-5 text-sm font-medium text-text transition hover:border-accent hover:text-accent focus-visible:border-accent focus-visible:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   <Linkedin className="h-4 w-4 shrink-0" aria-hidden />
                   {t('linkLabel')}

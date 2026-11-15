@@ -264,25 +264,12 @@
   },
   "team": {
     "eyebrow": "The team",
-    "title": "Three co-founders, three skill sets.",
-    "subtitle": "MyAppFactory brings together three Belgian partners, based in Charleroi, Brussels and Liège.",
+    "title": "Three co-founders, three engineers.",
+    "subtitle": "All three hold a master's degree in engineering. Their profiles complement each other and together cover the whole application, from the screens to the databases.",
     "role": "Co-founder",
+    "degree": "MSc in Engineering",
     "linkLabel": "LinkedIn profile",
-    "linkAria": "{name}'s LinkedIn profile (opens in a new tab)",
-    "members": {
-      "dominique": {
-        "focus": "Leadership and strategy",
-        "city": "Charleroi"
-      },
-      "arnaud": {
-        "focus": "Sales and partnerships",
-        "city": "Brussels"
-      },
-      "benoit": {
-        "focus": "AI architecture and automation",
-        "city": "Liège"
-      }
-    }
+    "linkAria": "{name}'s LinkedIn profile (opens in a new tab)"
   },
   "cta": {
     "eyebrow": "Let's talk",
